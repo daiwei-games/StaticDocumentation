@@ -8,15 +8,37 @@
     <title>Document</title>
     <link rel="stylesheet" href="/css/StyleBasicFramework.css">
     <style>
-        body {
-            background-color: blueviolet;
+        .Girdparent {
+            grid-template-rows: 200px 200px 200px 200px;
+            grid-template-columns: 200px 200px 200px 200px;
+            grid-template-areas:
+            "B1 B2 B2 B2"
+            "B1 B2 B2 B2"
+            "B1 B2 B2 B2"
+            "B3 B3 B3 B3";
+            background-color: #f1f1f1;
+            outline:1px solid red;
+        }
+        .C1{
+            grid-area: B1;
+            background-color: #0099ff;
+        }
+        .C2{
+            grid-area: B2;
+            background-color: #c300ff;
+        }
+        .C3{
+            grid-area: B3;
+            background-color: #00740f;
         }
     </style>
 </head>
 
 <body>
     <div class="Girdparent">
-        <h1>Hello World !</h1>
+        <div class="C1">AA</div>
+        <div class="C2">VV</div>
+        <div class="C3">BB</div>
     </div>
 </body>
 
