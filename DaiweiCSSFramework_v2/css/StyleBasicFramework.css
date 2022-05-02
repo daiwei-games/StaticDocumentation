@@ -1,8 +1,11 @@
 @import url("./FlexboxFramework.css");
 @import url("./GridFramework.css");
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
 /*物件初始化*/
 *,*::before,*::after {
-    font-family: 微軟正黑體,"Microsoft JhengHei", Arial, "Lucida Family";
+    
+    font-family: 'Ubuntu','Noto Sans TC',微軟正黑體,"Microsoft JhengHei", Arial, "Lucida Family";
     box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;

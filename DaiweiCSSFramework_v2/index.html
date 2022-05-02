@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="/css/StyleBasicFramework.css">
+    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
     <style>
         html{
 
@@ -20,28 +21,70 @@
             min-height: 100%;
         }
         .LayoutHeader{
-            height: 80px;
-            background-color: #274c77;
+            height: 70px;
+            background-color:#274c77;
             top: 0;
         }
         .LayoutHeader > .logo{
-            
+            padding:0 20px;
+            font-size: 2em;
+            font-weight: 900;
+        }
+        .LayoutHeader > .logo a,.LayoutHeader > .user a{
+            color: #fff;
+        }
+        .LayoutHeader > .logo span{
+            font-size: 1.5em;
+        }
+        .LayoutHeader > .user{
+            padding:0 20px;            
+        }
+        .LayoutHeader > .user span.icon{
+            padding:0;
+            margin: 0;
+            font-size: 30px;
+            vertical-align: text-top;
+            float: left;
+
         }
 
+
+
+        footer{
+            padding:10px 0;
+            color: #fff;
+            font-style: 12px;
+            font-weight: 100;
+            background-color: #274c77;
+        }
     </style>
 </head>
 <body>
     <div class="LayoutContent Flex-Box-Parent FB-DO-cv">
-        <header class="LayoutHeader Position-s Flex-Box-Parent-inline Flex-Flow-rw Flex-JC-sb FB-ACA-c">
-            <div class="logo">teamup</div>
-            <div class="">123 1231 123 </div>
+        <header class="LayoutHeader Position-s Flex-Box-Parent-inline Flex-Flow-rw Flex-JC-sb Flex-AI-c">
+            <div class="logo">
+                <a href="">
+                    <span>t</span>eamUP
+                    <span>.</span>
+                </a>
+            </div>
+            <div class="user Flex-Box-Parent-inline Flex-AI-c">
+                
+                    <span class="icon material-icons">groups_2</span>
+                    <span>
+                        登入
+                        /
+                        註冊
+                    </span>
+                
+            </div>
         </header>
         <div class="FB-fbf-1">
             <div>
                 s<br><br><br><br><br><br><br>s<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
             </div>
         </div>
-        <footer>
+        <footer class="t-align-c">
             daiwei 
         </footer>
     </div>
