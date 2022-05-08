@@ -2,6 +2,13 @@
 @import url("./GridFramework.css");
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&family=Ubuntu:wght@300;400;500;700&display=swap');
+:root{
+    --max-w1440:1440px;
+    --max-w1200:1200px;
+    --max-w1024:1024px;
+    --max-w768:768px;
+}
+
 /*物件初始化*/
 *,*::before,*::after {
     
@@ -27,7 +34,12 @@
     scroll-behavior: smooth;
     
     -webkit-overflow-scrolling: touch;
-
+}
+.not-transition{
+    transition: all 0s;
+    -o-transition: all 0s;
+    -moz-transition: all 0s;
+    -webkit-transition: all 0s;
 }
 
 html,body{
@@ -149,4 +161,14 @@ table {
 }
 .t-align-j{
    text-align: justify;
+}
+.float-L{
+    float: left;
+}
+.folat-R{
+    float: right;
+    
+}
+.clear-both{
+    clear:both;
 }

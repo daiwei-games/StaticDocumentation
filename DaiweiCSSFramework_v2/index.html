@@ -1,92 +1,1202 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="/css/StyleBasicFramework.css">
-    <link href="https://fonts.googleapis.com/css2?family=Material+Icons" rel="stylesheet">
-    <style>
-        html{
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="/css/StyleBasicFramework.css" />
+  <script src="https://kit.fontawesome.com/6bd870c950.js" crossorigin="anonymous"></script>
+  <style>
+    html,
+    body {
+      min-width: 280px;
+    }
 
-            height: 100%;
-        }
-        body{
-            
-            background-color: #e7ecef;
-        }
-        .LayoutContent{
-            height: 100%;
-            min-height: 100%;
-        }
-        .LayoutHeader{
-            height: 70px;
-            background-color:#274c77;
-            top: 0;
-        }
-        .LayoutHeader > .logo{
-            padding:0 20px;
-            font-size: 2em;
-            font-weight: 900;
-        }
-        .LayoutHeader > .logo a,.LayoutHeader > .user a{
-            color: #fff;
-        }
-        .LayoutHeader > .logo span{
-            font-size: 1.5em;
-        }
-        .LayoutHeader > .user{
-            padding:0 20px;            
-        }
-        .LayoutHeader > .user span.icon{
-            padding:0;
-            margin: 0;
-            font-size: 30px;
-            vertical-align: text-top;
-            float: left;
+    html {
+      height: 100%;
+    }
 
-        }
+    body {
+      background-color: #e7ecef;
+    }
+
+    .browseblock {
+      padding: 90px 0 0;
+    }
+
+    .browseblock-end {
+      padding: 0 0 90px;
+    }
+
+    @media only screen and (max-width: 616px) {
+      .browseblock {
+        padding: 60px 0 0;
+      }
+
+      .browseblock-end {
+        padding: 0 0 60px;
+      }
+    }
 
 
 
-        footer{
-            padding:10px 0;
-            color: #fff;
-            font-style: 12px;
-            font-weight: 100;
-            background-color: #274c77;
-        }
-    </style>
+    .LayoutContent {
+      height: 100%;
+      min-height: 100%;
+    }
+
+    .LayoutHeader {
+      padding: 0 20px;
+      background-color: #274c77;
+      top: 0;
+      z-index: 9999999;
+    }
+
+    .LayoutHeader>.logo {
+      padding: 0 20px 0 0;
+      font-size: 2em;
+      font-weight: 900;
+    }
+
+    .LayoutHeader>.logo span {
+      font-size: 1.5em;
+    }
+
+    .LayoutHeader1024>.menu li {
+      margin-right: 12px;
+      vertical-align: middle;
+      display: inline-block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .LayoutHeader1024>.menu li::after {
+      content: "";
+      width: 100%;
+      position: absolute;
+      left: -100%;
+      bottom: 0;
+      border-bottom: 1px solid #fff;
+    }
+
+    .LayoutHeader1024>.menu li:hover::after {
+      left: 0%;
+    }
+
+    .LayoutHeader1024>.menu li a {
+
+      padding: 8px 0;
+      display: block;
+    }
+
+    .LayoutHeader1024>.menu .icon {
+      vertical-align: top;
+    }
+
+    .LayoutHeader1024>.menu a,
+    .LayoutHeader1024>.user a {
+      font-size: 16px;
+      font-weight: 300;
+    }
+
+    /*---------文字顏色(白色)----------*/
+    .LayoutHeader>.logo a,
+    .LayoutHeader1024>.user a,
+    .LayoutHeader1024>.menu li a,
+    .LayoutHeaderMobile .MobileMenu,
+    span#beta {
+      color: #fff;
+    }
+
+
+
+    /*--------mobile start--------*/
+    .LayoutHeaderMobile .MobileMenu {
+      font-size: 28px;
+      display: inline-block;
+    }
+
+    .LayoutHeaderMobile .MobileUse {
+      padding: 3px 6px;
+      color: #274c77;
+      background-color: #fff;
+      float: right;
+
+    }
+
+    /*--------mobile end--------*/
+
+    span#beta {
+      padding: 3px;
+      font-size: 12px;
+      font-weight: 200;
+      text-align: center;
+      background: rgba(231, 236, 239, 0.5);
+      border-radius: 2px;
+      top: 5px;
+      right: 10px;
+    }
+
+    @media only screen and (min-width: 1024px) {
+      .LayoutHeaderMobile {
+        display: none;
+      }
+    }
+
+
+    @media only screen and (max-width: 1023px) {
+      .LayoutHeader1024 {
+        display: none;
+      }
+
+      .LayoutHeader>.logo {
+        font-size: 1.5em;
+      }
+
+      span#beta {
+        padding: 1px;
+      }
+    }
+
+    @media only screen and (max-width: 339px) {
+      .LayoutHeader {
+        padding: 0 10px;
+      }
+
+      .MobileTeammateButton {
+        font-size: 16px;
+      }
+
+      .MobileTeammateButton .icon {
+        display: none;
+      }
+    }
+  </style>
+
+
+  <style>
+    .FooterBody1024,
+    .FooterNavigation a,
+    .FooterBodyMobile,
+    .SubscribeForm button,
+    footer {
+      color: #fff;
+    }
+
+
+
+    footer {
+      padding: 10px 0;
+      font-style: 12px;
+      font-weight: 100;
+      background-color: #353535;
+    }
+
+
+    .FooterNavigation {
+      padding: 0 0;
+      background-color: #414141;
+    }
+
+    .FooterBody1024 {
+      width: 100%;
+      max-width: var(--max-w1200);
+      padding: 30px 20px;
+      margin: auto;
+    }
+
+    .CommunityLink1024 {
+      margin: auto;
+    }
+
+    .CommunityLink1024 ul {
+      background-color: #353535;
+    }
+
+    .CommunityLink1024 li {
+      margin: 10px;
+      display: inline-block;
+    }
+
+    .CommunityLink1024 li a {
+      font-size: 28px;
+    }
+
+    .FooterBody1024 h4 {
+      font-weight: 500;
+    }
+
+    .FooterLinkul li {
+      padding: 5px 0;
+    }
+
+    .FooterLinkul li a {
+      color: #c2c2c2;
+      font-size: 15px;
+    }
+
+    .SubscribeForm input {
+      width: 200px;
+      height: 40px;
+      padding: 0 12px;
+      font-size: 18px;
+      background-color: #e7ecef;
+    }
+
+    .SubscribeForm button {
+      width: 40px;
+      height: 40px;
+      vertical-align: bottom;
+      background-color: #6096ba;
+    }
+
+    .LabelBody {
+      margin: 12px auto;
+    }
+
+    .LabelBody label {
+      display: block;
+      color: #c2c2c2;
+      font-size: 15px;
+    }
+
+    .FooterNotes {
+      font-size: 14px;
+      color: #c2c2c2;
+    }
+
+    /*-----mobile start-----*/
+    .CommunityLinkMoblie ul {
+      width: 100%;
+      max-width: 1024px;
+      text-align: center;
+    }
+
+    .CommunityLinkMoblie li {
+      margin: 5px;
+      font-size: 22px;
+      display: inline-block;
+    }
+
+    .FooterBodyMobile {
+      width: 100%;
+      min-width: 280px;
+      max-width: 1024px;
+      margin: auto;
+    }
+
+    .FooterBodyMobile h4 {
+      font-size: 22px;
+      font-weight: 500;
+    }
+
+    .FooterBodyBlock {
+      min-width: 200px;
+      max-width: 80%;
+      padding: 12px 0;
+      margin: auto;
+      text-align: center;
+    }
+
+    .FooterBodyBlock .LabelBody label {
+      font-size: 20px;
+    }
+
+    .FooterBodyBlock .SubscribeForm input {
+      width: calc(100% - 60px);
+      height: 35px;
+    }
+
+    .FooterBodyBlock .SubscribeForm button {
+      width: 58px;
+      height: 35px;
+    }
+
+    /*--------mobile end-------*/
+    @media only screen and (min-width: 1024px) {
+
+      .CommunityLinkMoblie,
+      .FooterBodyMobile {
+        display: none;
+      }
+
+    }
+
+    @media only screen and (max-width: 1023px) {
+
+      .CommunityLink1024,
+      .FooterBody1024 {
+        display: none;
+      }
+    }
+  </style>
 </head>
+
 <body>
-    <div class="LayoutContent Flex-Box-Parent FB-DO-cv">
-        <header class="LayoutHeader Position-s Flex-Box-Parent-inline Flex-Flow-rw Flex-JC-sb Flex-AI-c">
-            <div class="logo">
-                <a href="">
-                    <span>t</span>eamUP
-                    <span>.</span>
-                </a>
+  <div class="LayoutContent Flex-Box-Parent FB-DO-cv">
+    <!--mocile header-->
+    <header class="LayoutHeaderMobile LayoutHeader Position-s Flex-Box-Parent Flex-AI-c">
+      <div class="FB-fbf-1">
+        <span class="MobileMenu">
+          <i class="fas fa-bars"></i>
+        </span>
+      </div>
+      <div class="logo Position-r">
+        <a href="">
+          <i>
+            <span>t</span>eamUP
+          </i>
+          <span>.</span>
+        </a>
+        <span id="beta" class="Position-a">beta</span>
+      </div>
+      <div class="FB-fbf-1">
+        <a href="">
+          <span class="MobileUse MobileTeammateButton">
+            <i class="icon fas fa-users"></i> 找隊友
+          </span>
+        </a>
+      </div>
+    </header>
+    <!-- end -->
+    <!--PC header-->
+    <header class="LayoutHeader1024 LayoutHeader Position-s Flex-Box-Parent Flex-AI-c">
+      <div class="logo Position-r">
+        <a href="">
+          <i>
+            <span>t</span>eamUP
+          </i>
+          <span>.</span>
+        </a>
+        <span id="beta" class="Position-a">beta</span>
+      </div>
+      <div class="menu FB-fbf-1">
+        <ul>
+          <li>
+            <a href="/">首頁</a>
+          </li>
+          <li>
+            <a href="">找報價 / 外包
+              <i class="icon fas fa-sort-down"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">找人才 / 團隊
+              <i class="icon fas fa-sort-down"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">我要接案 / 組隊
+              <i class="icon fas fa-sort-down"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">問題回報</a>
+          </li>
+          <li><a href="">捐贈</a></li>
+        </ul>
+      </div>
+      <div class="user">
+        <a href="">
+          <span><i class="far fa-user"></i> 登入 / 註冊 </span>
+        </a>
+      </div>
+    </header>
+    <!-- end -->
+
+    <style>
+      .banner {
+        height: 70vh;
+        color: #6c584c;
+        /*background:#f0ead2 url("https://picsum.photos/2554/1440") fixed no-repeat center / cover;*/
+        background-color: #f0ead2;
+
+      }
+
+      .banner-text {
+        max-width: 520px;
+        top: 50%;
+        left: 20%;
+        right: 10px;
+        transform: translateY(-50%);
+        z-index: 999;
+      }
+
+      .banner-text h1 {
+        font-size: 1.8em;
+        font-weight: 500;
+
+      }
+
+      .banner-text h1 small {
+        margin: 14px auto;
+        font-size: .8em;
+        display: block;
+      }
+
+      #banner-form {
+        width: 100%;
+        height: 50px;
+        padding: 6px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
+      }
+
+      #banner-form * {
+        border-radius: 8px;
+      }
+
+      #banner-form form {
+        height: 100%;
+      }
+
+      #banner-form input {
+        width: calc(100% - 120px);
+        height: 100%;
+        padding: 0 12px;
+        color: #274c77;
+        font-size: 18px;
+        font-weight: 600;
+      }
+
+      #banner-form button {
+        width: 120px;
+        height: 100%;
+        color: #fff;
+        font-size: 16px;
+        background-color: #274c77;
+      }
+
+      .banner-tag {
+        padding: 8px 0;
+      }
+
+      .banner-tag li {
+        padding: 0 5px;
+        margin-bottom: 12px;
+        display: inline-block;
+      }
+
+      .banner-tag li a {
+        color: #6096ba;
+        font-size: 14px;
+        font-weight: 600;
+        display: inline-block;
+      }
+
+      .banner-tag li a::before {
+        content: '#';
+      }
+
+      @media only screen and (max-width: 768px) {
+        .banner-text {
+          left: 10%;
+        }
+      }
+
+      @media only screen and (max-width: 600px) {
+        .banner-text {
+          left: 3%;
+        }
+
+        .banner-text h1 {
+          font-size: 1.4em;
+          font-weight: 600;
+        }
+
+        .banner-text h1 small {
+          font-size: .8em;
+          display: block;
+        }
+
+        #banner-form button {
+          width: 80px;
+        }
+
+        #banner-form input {
+          width: calc(100% - 80px);
+          padding: 0 6px;
+          font-size: 16px;
+          font-weight: 500;
+        }
+      }
+    </style>
+    <div class="FB-fbf-1">
+      <div>
+
+        <div class="banner Position-r Overflow-h">
+          <div class="banner-text Position-a not-transition">
+            <h1>
+              在 <u>temaUP.</u> 找到最理想的隊友
+              <small>跟專業的人組隊接案，大案子也不怕! 重要的是免費</small>
+            </h1>
+            <div id="banner-form" class="Overflow-h">
+              <form action="">
+                <input type="text" placeholder="想找甚麼專業的隊友呢?"><button type="button">搜尋隊友</button>
+              </form>
             </div>
-            <div class="user Flex-Box-Parent-inline Flex-AI-c">
-                
-                    <span class="icon material-icons">groups_2</span>
-                    <span>
-                        登入
-                        /
-                        註冊
-                    </span>
-                
-            </div>
-        </header>
-        <div class="FB-fbf-1">
-            <div>
-                s<br><br><br><br><br><br><br>s<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-            </div>
+            <ul class="banner-tag">
+              <li><a href="">快速外包案子</a></li>
+              <li><a href="">前往瀏覽案子</a></li>
+              <li><a href="">前往尋找隊友</a></li>
+              <li><a href="">登入 / 註冊</a></li>
+            </ul>
+          </div>
         </div>
-        <footer class="t-align-c">
-            daiwei 
-        </footer>
+        <!--公司專案臨時請不到人才、團隊? 或獨立工作室沒幫手不敢接大案子? 又或者不知道去哪找到志同道合的夥伴? 趕快來 <b><u>teamUP</u></b>. 找人組隊增加 接案 或 專案 的靈活性吧 !-->
+        <style>
+          .iconsblock {
+            max-width: var(--max-w1200);
+            margin: auto;
+          }
+
+          .iconsblock>div {
+            min-width: 200px;
+          }
+
+          .iconsblock-ul {
+            width: 100%;
+            text-align: center;
+          }
+
+          .iconsblock-ul li {
+            vertical-align: top;
+          }
+
+          .iconsblock-icon-li {
+            min-height: 150px;
+          }
+
+          .iconsblock-text-li {
+            min-height: 80px;
+          }
+
+          .iconsblock-icon {
+            color: #6096ba;
+            font-size: 80px;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+          }
+
+          .iconsblock-text {
+            top: 50%;
+            left: 0;
+            right: 0;
+            transform: translateY(-50%);
+          }
+
+          .iconsblock-ul li h2 {
+            padding: 0 8px;
+            margin: 12px auto;
+            font-size: 18px;
+            font-weight: 500;
+          }
+
+          .iconsblock-ul li h2 small {
+            padding: 5px 0;
+            color: #919ea5;
+            font-size: 14px;
+            font-weight: 400;
+            display: block;
+          }
+
+          .iconsQuickaction {
+            margin: 40px auto 0;
+          }
+
+          .iconsQuickaction button {
+            width: 120px;
+            padding: 12px 0;
+            margin: 18px auto 0;
+            color: #fff;
+            font-size: 18px;
+            background-color: rgb(173, 193, 120);
+            border-radius: 8px;
+            box-shadow: 0 0 1px 5px rgba(173, 193, 120, .5), 0 0 1px 10px rgba(173, 193, 120, .3), 0 0 15px rgba(0, 0, 0, .2) inset;
+          }
+
+          @media only screen and (max-width: 616px) {
+
+            .iconsblock-text-li {
+              min-height: 80px;
+            }
+
+            .iconsblock-ul li h2 {
+              margin: auto;
+            }
+
+          }
+
+          @media only screen and (max-width: 500px) {
+            .iconsblock>div {
+              width: 100%;
+              min-width: 280px;
+              min-height: auto;
+            }
+
+            .iconsblock-ul li {
+              width: 49%;
+              display: inline-block;
+            }
+
+            .iconsblock-icon-li {
+              max-width: 120px;
+            }
+
+            .iconsblock-text-li {
+              min-height: 150px;
+            }
+
+            .iconsblock-icon {
+              font-size: 60px;
+            }
+
+            .iconsblock-text {
+              width: 90%;
+              top: 50%;
+              transform: translateY(-50%);
+            }
+
+            .iconsblock-ul li h2 {
+              margin-left: 12px;
+              text-align: left;
+            }
+          }
+
+          @media only screen and (max-width: 320px) {
+            .iconsQuickaction h3 {
+              font-size: 1em;
+            }
+          }
+        </style>
+        <!--icon 區塊-->
+        <div class="browseblock">
+          <div class="iconsblock Flex-Box-Parent Flex-Wrap-w Flex-JI-c Flex-AI-c">
+            <div class="FB-fbf-1">
+              <ul class="iconsblock-ul">
+                <li class="iconsblock-icon-li Position-r">
+                  <div class="iconsblock-icon Position-a">
+                    <i class="fas fa-leaf"></i>
+                  </div>
+                </li>
+                <li class="iconsblock-text-li Position-r">
+                  <h2 class="iconsblock-text Position-a">免費外包、接案
+                    <small>
+                      免費、快速外包案子，也能免費接案。
+                    </small>
+                  </h2>
+                </li>
+              </ul>
+            </div>
+            <div class="FB-fbf-1">
+              <ul class="iconsblock-ul">
+                <li class="iconsblock-icon-li Position-r">
+                  <div class="iconsblock-icon Position-a">
+                    <i class="fas fa-handshake"></i>
+                  </div>
+                </li>
+                <li class="iconsblock-text-li Position-r">
+                  <h2 class="iconsblock-text Position-a">免費找隊友
+                    <small>
+                      在這裡找到團一起完成專案的隊友!
+                    </small>
+                  </h2>
+                </li>
+              </ul>
+            </div>
+            <div class="FB-fbf-1">
+              <ul class="iconsblock-ul">
+                <li class="iconsblock-icon-li Position-r">
+                  <div class="iconsblock-icon Position-a">
+                    <i class="fas fa-users"></i>
+                  </div>
+                </li>
+                <li class="iconsblock-text-li Position-r">
+                  <h2 class="iconsblock-text Position-a">企業臨時企劃
+                    <small>
+                      臨時企劃資金有限，就直接找一次性團隊。
+                    </small>
+                  </h2>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="iconsQuickaction t-align-c">
+            <h3>
+              手上已經有案子，更想找一起完成的隊友!
+            </h3>
+            <button type="button">免費註冊</button>
+          </div>
+        </div>
+        <!--end-->
+
+        <style>
+          .explainbody {
+            width: 100%;
+            max-width: var(--max-w1200);
+            padding: 20px 0;
+            margin: auto;
+            background-image: linear-gradient(90deg, transparent, #f0ead2, transparent);
+          }
+
+          .explain-img {
+            max-width: 30%;
+          }
+
+          .explain-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+          }
+
+          .explain-text {
+            padding: 0 30px;
+          }
+
+          .explain-text h2 {
+            margin-bottom: 20px;
+          }
+
+          .explain-text h2 small {
+            padding: 10px 0;
+            color: #6c584c;
+            font-weight: 400;
+            display: block;
+          }
+
+          .explainbuttons {
+            margin-top: 20px;
+          }
+
+          .explainbuttons button {
+            width: 60%;
+            height: 50px;
+            color: #6c584c;
+            font-size: 22px;
+            background-color: #f0ead2;
+            box-shadow: 0 0 1px 2px #6c584c, 0 8px 1px 2px #6c584c;
+            border-radius: 8px;
+            box-sizing: content-box;
+          }
+
+          .explainbuttons button:hover {
+            box-shadow: 0 0 1px 2px #6c584c, 0 8px 1px 2px #6c584c, 0 0 90px 1px rgba(0, 0, 0, .2) inset;
+          }
+
+          @media only screen and (max-width: 768px) {
+            .explainbody {
+              padding: 10px;
+            }
+
+            .explain-img {
+              max-width: 55%;
+            }
+
+            .explain-text h2 {
+              font-size: 1em;
+            }
+
+            .explainbuttons button {
+              font-size: 14px;
+            }
+          }
+
+          @media only screen and (max-width: 520px) {
+            .explainbody {
+              background-image: linear-gradient(180deg, transparent, #f0ead2, transparent);
+            }
+
+            .explain-img {
+              max-width: 100%;
+            }
+
+            .explain-text {
+              padding: 20px 0;
+            }
+
+            .explainbuttons button {
+              width: 80%;
+              font-size: 20px;
+            }
+          }
+
+          .stepbody {
+            max-width: var(--max-w1200);
+            padding: 60px 30px;
+            margin: auto;
+            background-image: linear-gradient(45deg, transparent, #fff, transparent);
+            border-radius: 8px;
+          }
+
+          .steptitle {
+            margin-bottom: 20px;
+          }
+
+          .step {
+            max-width: var(--max-w1024);
+            margin: auto;
+          }
+
+          .stepimg {
+            max-width: 300px;
+            max-height: 150px;
+            border-radius: 8px;
+            overflow: hidden;
+          }
+
+          .stepimg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+
+          .step li {
+            margin: 0 12px 12px;
+            border-radius: 8px;
+            box-shadow: 5px 5px 12px 0px rgba(39, 76, 119, .2);
+            overflow: hidden;
+          }
+
+          .step li h3 {
+            color: #274c77;
+            padding: 0 8px 12px;
+          }
+
+          .step li p {
+            padding: 0 8px 0;
+            color: #6096ba;
+            overflow: hidden;
+          }
+
+          .step li h3::before {
+            content: '步驟';
+          }
+
+          .stepbutton button {
+            width: 120px;
+            padding: 12px 0;
+            margin: 18px auto 0;
+            color: #fff;
+            font-size: 18px;
+            background-color: #adc178;
+            border-radius: 8px;
+          }
+
+          @media only screen and (max-width: 768px) {
+            .stepimg {
+              width: 100%;
+              max-width: 100%;
+              max-height: 150px;
+              border-radius: 0px;
+            }
+
+            .step li h3 {
+              color: #274c77;
+              padding: 12px 8px 12px;
+            }
+
+            .step li p {
+              padding: 12px 8px;
+            }
+
+          }
+        </style>
+        <!--explain 區塊-->
+        <div class="browseblock">
+          <div class="explainbody Flex-Box-Parent Flex-Wrap-w">
+            <div class="explain-img">
+              <img src="https://picsum.photos/600" alt="">
+            </div>
+            <div class="explain-text FB-fbf-1">
+              <h2>
+                Specific Image
+                <small>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia voluptatibus totam officiis a
+                  officia aliquam exercitationem, placeat velit amet perspiciatis sunt cumque minima dolorum nulla
+                  debitis, commodi est, ex cum.
+                </small>
+              </h2>
+              <h2>
+                Specific Image
+                <small>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Mollitia voluptatibus totam officiis a
+                  officia aliquam exercitationem, placeat velit amet perspiciatis sunt cumque minima dolorum nulla
+                  debitis, commodi est, ex cum.
+                </small>
+              </h2>
+
+              <div class="explainbuttons t-align-c">
+                <button type="button"><i class="fas fa-users"></i> 前往免費找團隊</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!--end-->
+
+        <!--step 區塊-->
+        <div class="browseblock browseblock-end">
+          <div class="stepbody">
+            <h2 class="steptitle t-align-c clear-both">
+              簡單發按 N 步驟
+            </h2>
+            <ul class="step">
+              <li>
+                <div class="Flex-Box-Parent Flex-Wrap-w">
+                  <div class="stepimg">
+                    <img src="https://picsum.photos/300" alt="">
+                  </div>
+                  <div class="FB-fbf-1">
+                    <h3>1. 免費發案</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda officiis, dolores
+                      molestias voluptatibus voluptatum excepturi praesentium neque nobis suscipit quaerat atque sed ad,
+                      magnam fuga nostrum harum officia veritatis.
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione assumenda officiis, dolores
+                      molestias voluptatibus voluptatum excepturi praesentium neque nobis suscipit quaerat atque sed ad,
+                      magnam fuga nostrum harum officia veritatis.
+                    </p>
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="Flex-Box-Parent Flex-Wrap-w">
+                  <div class="FB-fbf-1">
+                    <h3>2. 團隊 /人才報價</h3>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quam, nulla. Necessitatibus veritatis
+                      blanditiis voluptatibus quas mollitia eos dolorum at quisquam ut pariatur, ratione quos deleniti
+                      adipisci velit neque esse perferendis.</p>
+                  </div>
+                  <div class="stepimg">
+                    <img src="https://picsum.photos/350" alt="">
+                  </div>
+                </div>
+              </li>
+              <li>
+                <div class="Flex-Box-Parent Flex-Wrap-w">
+                  <div class="stepimg">
+                    <img src="https://picsum.photos/400" alt="">
+                  </div>
+                  <div class="FB-fbf-1">
+                    <h3>3. 開始合作</h3>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fugiat maxime dolores cum, quidem
+                      voluptas
+                      laboriosam amet. Numquam eaque voluptatum officiis vero sequi consectetur, reiciendis ut facere a
+                      obcaecati quos voluptate.</p>
+                  </div>
+                </div>
+              </li>
+            </ul>
+
+            <div class="stepbutton t-align-c">
+              <button type="button"><i class="fas fa-brush"></i> 免費發案</button>
+            </div>
+          </div>
+        </div>
+        <!--end-->
+
+        <div class="FooterNavigation">
+          <!--PC Footer Content-->
+          <div class="CommunityLink1024 t-align-c">
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-line"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-instagram-square"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="FooterBody1024 Flex-Box-Parent">
+            <div class="FB-fbf-1">
+              <h4>
+                關於我們
+              </h4>
+              <ul class="FooterLinkul">
+                <li>
+                  <a href="">認識 TeamUP</a>
+                </li>
+                <li>
+                  <a href="">關於 玳維數位娛樂</a>
+                </li>
+                <li>
+                  <a href="">未來展望</a>
+                </li>
+              </ul>
+            </div>
+            <div class="FB-fbf-1">
+              <h4>
+                會員中心
+              </h4>
+              <ul class="FooterLinkul">
+                <li>
+                  <a href="">加入會員</a>
+                </li>
+                <li>
+                  <a href="">會員登入</a>
+                </li>
+                <li>
+                  <a href="">會員中心</a>
+                </li>
+              </ul>
+            </div>
+            <div class="FB-fbf-1">
+              <h4>客服中心</h4>
+              <ul class="FooterLinkul">
+                <li>
+                  <a href="">常見問題</a>
+                </li>
+                <li>
+                  <a href="">問題回報</a>
+                </li>
+                <li>
+                  <a href="">意見提供</a>
+                </li>
+                <li>
+                  <a href="">系通更新日誌</a>
+                </li>
+                <li>
+                  <a href="">公告</a>
+                </li>
+              </ul>
+            </div>
+            <div class="FB-fbf-1">
+              <h4>訂閱最新訊息</h4>
+              <div class="SubscribeForm">
+                <form action="">
+                  <div class="LabelBody">
+                    <label for="ClientMail">E-Mail</label>
+                    <input type="text" name="ClientMail" id="ClientMail"><button type="button">訂閱</button>
+                  </div>
+                </form>
+              </div>
+              <p class="FooterNotes">ps.只有功能更新，或有新活動時才會發送消息，其餘時間將不會發送垃圾信件。</p>
+            </div>
+          </div>
+          <!-- end -->
+  
+          <!--Mobile Start-->
+          <div class="CommunityLinkMoblie">
+            <ul>
+              <li>
+                <a href="">
+                  <i class="fab fa-facebook"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-line"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-instagram-square"></i>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i class="fab fa-linkedin"></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="FooterBodyMobile">
+            <div class="FooterBodyBlock">
+              <h4>
+                關於我們
+              </h4>
+              <ul class="FooterLinkul">
+                <li>
+                  <a href="">認識 TeamUP</a>
+                </li>
+                <li>
+                  <a href="">關於 玳維數位娛樂</a>
+                </li>
+                <li>
+                  <a href="">未來展望</a>
+                </li>
+              </ul>
+            </div>
+            <div class="FooterBodyBlock">
+              <h4>
+                會員中心
+              </h4>
+              <ul class="FooterLinkul">
+                <li>
+                  <a href="">加入會員</a>
+                </li>
+                <li>
+                  <a href="">會員登入</a>
+                </li>
+                <li>
+                  <a href="">會員中心</a>
+                </li>
+              </ul>
+            </div>
+            <div class="FooterBodyBlock">
+              <h4>客服中心</h4>
+              <ul class="FooterLinkul">
+                <li>
+                  <a href="">常見問題</a>
+                </li>
+                <li>
+                  <a href="">問題回報</a>
+                </li>
+                <li>
+                  <a href="">意見提供</a>
+                </li>
+                <li>
+                  <a href="">系通更新日誌</a>
+                </li>
+                <li>
+                  <a href="">公告</a>
+                </li>
+              </ul>
+            </div>
+            <div class="FooterBodyBlock">
+              <h4>訂閱最新訊息</h4>
+              <div class="SubscribeForm">
+                <form action="">
+                  <div class="LabelBody">
+                    <label for="ClientMail">E-Mail</label>
+                    <input type="text" name="ClientMail" id="ClientMail"><button type="button">訂閱</button>
+                  </div>
+                </form>
+              </div>
+              <p class="FooterNotes">ps.只有功能更新，或有新活動時才會發送消息，其餘時間將不會發送垃圾信件。</p>
+            </div>
+          </div>
+          <!--Mobile End-->
+
+        </div>
+        <footer class="t-align-c">© 玳維數位娛樂 2022</footer>
+      </div>
     </div>
+
+  </div>
 </body>
+
 </html>
+<script>
+  const bannerdoc = document.querySelector(".banner-text");
+
+  window.addEventListener("scroll", () => {
+    let ScrollValue = window.scrollY;
+  });
+</script>
