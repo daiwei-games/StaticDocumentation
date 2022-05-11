@@ -1,0 +1,123 @@
+﻿.iconsblock {
+    max-width: var(--max-w1200);
+    margin: auto;
+}
+
+    .iconsblock > div {
+        min-width: 200px;
+    }
+
+.iconsblock-ul {
+    width: 100%;
+    text-align: center;
+}
+
+    .iconsblock-ul li {
+        vertical-align: top;
+    }
+
+.iconsblock-icon-li {
+    min-height: 150px;
+}
+
+.iconsblock-text-li {
+    min-height: 80px;
+}
+
+.iconsblock-icon {
+    color: #6096ba;
+    font-size: 80px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.iconsblock-text {
+    top: 50%;
+    left: 0;
+    right: 0;
+    transform: translateY(-50%);
+}
+
+.iconsblock-ul li h2 {
+    padding: 0 8px;
+    margin: 12px auto;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+    .iconsblock-ul li h2 small {
+        padding: 5px 0;
+        color: #919ea5;
+        font-size: 14px;
+        font-weight: 400;
+        display: block;
+    }
+
+.iconsQuickaction {
+    margin: 40px auto 0;
+}
+
+    .iconsQuickaction button {
+        width: 120px;
+        padding: 12px 0;
+        margin: 18px auto 0;
+        color: #fff;
+        font-size: 18px;
+        background-color: rgb(173, 193, 120);
+        border-radius: 8px;
+        box-shadow: 0 0 1px 5px rgba(173, 193, 120, .5), 0 0 1px 10px rgba(173, 193, 120, .3), 0 0 15px rgba(0, 0, 0, .2) inset;
+    }
+
+@media only screen and (max-width: 616px) {
+
+    .iconsblock-text-li {
+        min-height: 80px;
+    }
+
+    .iconsblock-ul li h2 {
+        margin: auto;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .iconsblock > div {
+        width: 100%;
+        min-width: 280px;
+        min-height: auto;
+    }
+
+    .iconsblock-ul li {
+        width: 49%;
+        display: inline-block;
+    }
+
+    .iconsblock-icon-li {
+        max-width: 120px;
+    }
+
+    .iconsblock-text-li {
+        min-height: 150px;
+    }
+
+    .iconsblock-icon {
+        font-size: 60px;
+    }
+
+    .iconsblock-text {
+        width: 90%;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .iconsblock-ul li h2 {
+        margin-left: 12px;
+        text-align: left;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .iconsQuickaction h3 {
+        font-size: 1em;
+    }
+}

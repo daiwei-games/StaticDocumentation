@@ -1,0 +1,129 @@
+﻿.LayoutContent {
+    height: 100%;
+    min-height: 100%;
+}
+
+.LayoutHeader {
+    padding: 0 20px;
+    background-color: #274c77;
+    top: 0;
+    z-index: 9999999;
+}
+
+    .LayoutHeader > .logo {
+        padding: 0 20px 0 0;
+        font-size: 2em;
+        font-weight: 900;
+    }
+
+        .LayoutHeader > .logo span {
+            font-size: 1.5em;
+        }
+
+.LayoutHeader1024 > .menu li {
+    margin-right: 12px;
+    vertical-align: middle;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+    .LayoutHeader1024 > .menu li::after {
+        content: "";
+        width: 100%;
+        position: absolute;
+        left: -100%;
+        bottom: 0;
+        border-bottom: 1px solid #fff;
+    }
+
+    .LayoutHeader1024 > .menu li:hover::after {
+        left: 0%;
+    }
+
+    .LayoutHeader1024 > .menu li a {
+        padding: 8px 0;
+        display: block;
+    }
+
+.LayoutHeader1024 > .menu .icon {
+    vertical-align: top;
+}
+
+.LayoutHeader1024 > .menu a,
+.LayoutHeader1024 > .user a {
+    font-size: 16px;
+    font-weight: 300;
+}
+
+/*---------文字顏色(白色)----------*/
+.LayoutHeader > .logo a,
+.LayoutHeader1024 > .user a,
+.LayoutHeader1024 > .menu li a,
+.LayoutHeaderMobile .MobileMenu,
+span#beta {
+    color: #fff;
+}
+
+
+
+/*--------mobile start--------*/
+.LayoutHeaderMobile .MobileMenu {
+    font-size: 28px;
+    display: inline-block;
+}
+
+.LayoutHeaderMobile .MobileUse {
+    padding: 3px 6px;
+    color: #274c77;
+    background-color: #fff;
+    float: right;
+}
+
+/*--------mobile end--------*/
+
+span#beta {
+    padding: 3px;
+    font-size: 12px;
+    font-weight: 200;
+    text-align: center;
+    background: rgba(231, 236, 239, 0.5);
+    border-radius: 2px;
+    top: 5px;
+    right: 10px;
+}
+
+@media only screen and (min-width: 1024px) {
+    .LayoutHeaderMobile {
+        display: none;
+    }
+}
+
+
+@media only screen and (max-width: 1023px) {
+    .LayoutHeader1024 {
+        display: none;
+    }
+
+    .LayoutHeader > .logo {
+        font-size: 1.5em;
+    }
+
+    span#beta {
+        padding: 1px;
+    }
+}
+
+@media only screen and (max-width: 339px) {
+    .LayoutHeader {
+        padding: 0 10px;
+    }
+
+    .MobileTeammateButton {
+        font-size: 16px;
+    }
+
+        .MobileTeammateButton .icon {
+            display: none;
+        }
+}

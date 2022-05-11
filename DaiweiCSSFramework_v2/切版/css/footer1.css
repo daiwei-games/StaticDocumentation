@@ -1,0 +1,148 @@
+﻿.FooterBody1024,
+.FooterNavigation a,
+.FooterBodyMobile,
+.SubscribeForm button,
+footer {
+    color: #fff;
+}
+footer {
+    padding: 10px 0;
+    font-size: 12px;
+    font-weight: 100;
+    background-color: #353535;
+}
+.FooterNavigation {
+    padding: 0 0;
+    background-color: #414141;
+}
+
+.FooterBody1024 {
+    width: 100%;
+    max-width: var(--max-w1200);
+    padding: 30px 20px;
+    margin: auto;
+}
+
+.CommunityLink1024 {
+    margin: auto;
+}
+
+    .CommunityLink1024 ul {
+        background-color: #353535;
+    }
+
+    .CommunityLink1024 li {
+        margin: 10px;
+        display: inline-block;
+    }
+
+        .CommunityLink1024 li a {
+            font-size: 28px;
+        }
+
+.FooterBody1024 h4 {
+    font-weight: 500;
+}
+
+.FooterLinkul li {
+    padding: 5px 0;
+}
+
+    .FooterLinkul li a {
+        color: #c2c2c2;
+        font-size: 15px;
+    }
+
+.SubscribeForm input {
+    width: 200px;
+    height: 40px;
+    padding: 0 12px;
+    font-size: 18px;
+    background-color: #e7ecef;
+}
+
+.SubscribeForm button {
+    width: 40px;
+    height: 40px;
+    vertical-align: bottom;
+    background-color: #6096ba;
+}
+
+.LabelBody {
+    margin: 12px auto;
+}
+
+    .LabelBody label {
+        display: block;
+        color: #c2c2c2;
+        font-size: 15px;
+    }
+
+.FooterNotes {
+    font-size: 14px;
+    color: #c2c2c2;
+}
+
+/*-----mobile start-----*/
+.CommunityLinkMoblie ul {
+    width: 100%;
+    max-width: 1024px;
+    text-align: center;
+}
+
+.CommunityLinkMoblie li {
+    margin: 5px;
+    font-size: 22px;
+    display: inline-block;
+}
+
+.FooterBodyMobile {
+    width: 100%;
+    min-width: 280px;
+    max-width: 1024px;
+    margin: auto;
+}
+
+    .FooterBodyMobile h4 {
+        font-size: 22px;
+        font-weight: 500;
+    }
+
+.FooterBodyBlock {
+    min-width: 200px;
+    max-width: 80%;
+    padding: 12px 0;
+    margin: auto;
+    text-align: center;
+}
+
+    .FooterBodyBlock .LabelBody label {
+        font-size: 20px;
+    }
+
+    .FooterBodyBlock .SubscribeForm input {
+        width: calc(100% - 60px);
+        height: 35px;
+    }
+
+    .FooterBodyBlock .SubscribeForm button {
+        width: 58px;
+        height: 35px;
+    }
+
+/*--------mobile end-------*/
+@media only screen and (min-width: 1024px) {
+
+    .CommunityLinkMoblie,
+    .FooterBodyMobile {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 1023px) {
+
+    .CommunityLink1024,
+    .FooterBody1024 {
+        display: none;
+    }
+}

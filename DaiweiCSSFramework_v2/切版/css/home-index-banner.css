@@ -1,0 +1,114 @@
+﻿.banner {
+    height: 70vh;
+    color: #6c584c;
+    /*background:#f0ead2 url("https://picsum.photos/2554/1440") fixed no-repeat center / cover;*/
+    background-color: #f0ead2;
+}
+
+.banner-text {
+    max-width: 520px;
+    top: 50%;
+    left: 20%;
+    right: 10px;
+    transform: translateY(-50%);
+    z-index: 999;
+}
+
+    .banner-text h1 {
+        font-size: 1.8em;
+        font-weight: 500;
+    }
+
+        .banner-text h1 small {
+            margin: 14px auto;
+            font-size: .8em;
+            display: block;
+        }
+
+#banner-form {
+    width: 100%;
+    height: 50px;
+    padding: 6px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 5px 5px 30px 1px rgba(0, 0, 0, 0.3);
+}
+
+    #banner-form * {
+        border-radius: 8px;
+    }
+
+    #banner-form form {
+        height: 100%;
+    }
+
+    #banner-form input {
+        width: calc(100% - 120px);
+        height: 100%;
+        padding: 0 12px;
+        color: #274c77;
+        font-size: 18px;
+        font-weight: 600;
+    }
+
+    #banner-form button {
+        width: 120px;
+        height: 100%;
+        color: #fff;
+        font-size: 16px;
+        background-color: #274c77;
+    }
+
+.banner-tag {
+    padding: 8px 0;
+}
+
+    .banner-tag li {
+        padding: 0 5px;
+        margin-bottom: 12px;
+        display: inline-block;
+    }
+
+        .banner-tag li a {
+            color: #6096ba;
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+            .banner-tag li a::before {
+                content: '#';
+            }
+
+@media only screen and (max-width: 768px) {
+    .banner-text {
+        left: 10%;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .banner-text {
+        left: 3%;
+    }
+
+        .banner-text h1 {
+            font-size: 1.4em;
+            font-weight: 600;
+        }
+
+            .banner-text h1 small {
+                font-size: .8em;
+                display: block;
+            }
+
+    #banner-form button {
+        width: 80px;
+    }
+
+    #banner-form input {
+        width: calc(100% - 80px);
+        padding: 0 6px;
+        font-size: 16px;
+        font-weight: 500;
+    }
+}

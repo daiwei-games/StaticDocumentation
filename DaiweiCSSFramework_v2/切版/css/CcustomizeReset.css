@@ -1,0 +1,29 @@
+﻿html,
+body {
+    min-width: 280px;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: #e7ecef;
+}
+
+.browseblock {
+    padding: 90px 0 0;
+}
+
+.browseblock-end {
+    padding: 0 0 90px;
+}
+@media only screen and (max-width: 616px) {
+    .browseblock {
+        padding: 60px 0 0;
+    }
+
+    .browseblock-end {
+        padding: 0 0 60px;
+    }
+}

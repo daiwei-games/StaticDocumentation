@@ -1,0 +1,58 @@
+1. @RenderBody()
+
+　　代表：是一個占位符，是留給子頁面的位置，子頁面使用這個模版，子頁面中的內容會被放到@RenderBody的位置。合並後當作一個整體加載
+
+2. @RenderSection(string,boolean)
+
+　　第一個參數是string類型，標明名稱；第二個參數是boolean類型，表示子頁面是否必須要寫它。
+
+　　代表：是個占位符，解決了只有一個RenderBody的問題。比如，子頁面要引入自己css文件，而@RenderBody寫在了模板的<body>的最下面，而css想要加到模板的<head>中，這時候只需要在模板的head中加入 @RenderSection("css",false) 在子頁面上加入 ： @section css{ //是引用的css }
+
+也可以這樣：
+
+//先判斷目標頁中是否要加載這些片段，再加載
+@if(IsSectionDefined("css")) //該值指示是否在頁中定義了指定部分
+{
+    @RenderSection("css")  //將呈現指定部分的內容
+}
+3. @Html.Partial()
+
+　　返回值類型為MvcHtmlString，是一個字符串；
+
+　　直接加載視圖文件內容；
+
+　　可以直接提供用戶控件名作為參數；
+
+　　簡單的沒有任何邏輯的用戶控件，推薦使用Partial；
+
+4. @Html.Action()
+
+　　返回值類型為MvcHtmlString，是一個字符串；
+
+　　重新執行一次Controller→Model→View的順序，然後把產生的頁面帶回到原來的View中再回傳；
+
+　　需要有對應的Action，在Action內部返回PartialResult（即return PartialView()）；
+
+　　對於需要設置一些Model的用戶控件，推薦使用Action；
+
+　　在return PartialView時可以根據不同的場景選擇不同的用戶控件；
+
+5. @Html.RenderPartial()
+
+　　返回值是void，在方法內部進行輸出；
+
+　　直接加載視圖文件內容；
+
+　　可以直接提供用戶控件名作為參數；
+
+　　簡單的沒有任何邏輯的用戶控件，推薦使用Partial；
+
+6. @Html.RenderAction()
+
+　　返回值是void，在方法內部進行輸出；
+
+　　重新執行一次Controller→Model→View的順序，然後把產生的頁面帶回到原來的View中再回傳；
+
+　　需要有對應的Action，在Action內部返回PartialResult（即return PartialView()）；
+
+　　對於需要設置一些Model的用戶控件，推薦使用Action；

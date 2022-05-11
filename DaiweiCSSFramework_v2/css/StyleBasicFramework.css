@@ -103,6 +103,11 @@ table {
     position: sticky;
     position: -webkit-sticky;
 }
+.Position-Translate50{
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
 .UserSelect-n{/*禁止選取反白*/
     user-select:none;
     -ms-user-select: none;

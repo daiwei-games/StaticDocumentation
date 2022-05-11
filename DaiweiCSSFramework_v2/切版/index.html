@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/StyleBasicFramework.css" />
+  <link rel="stylesheet" href="css/CcustomizeReset.css" />
+  <link rel="stylesheet" href="css/LayoutHeader1.css" />
+  <link rel="stylesheet" href="css/LayoutFooter1.css" />
+  <script src="https://kit.fontawesome.com/6bd870c950.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <div class="LayoutContent Flex-Box-Parent FB-DO-cv">
+    <!--mocile header-->
+    <header class="LayoutHeaderMobile LayoutHeader Position-s Flex-Box-Parent Flex-AI-c">
+      <div class="FB-fbf-1">
+        <span class="MobileMenu">
+          <i class="fas fa-bars"></i>
+        </span>
+      </div>
+      <div class="logo Position-r">
+        <a href="">
+          <i>
+            <span>t</span>eamUP
+          </i>
+          <span>.</span>
+        </a>
+        <span id="beta" class="Position-a">beta</span>
+      </div>
+      <div class="FB-fbf-1">
+        <a href="">
+          <span class="MobileUse MobileTeammateButton">
+            <i class="icon fas fa-users"></i> 找隊友
+          </span>
+        </a>
+      </div>
+    </header>
+    <!-- end -->
+    <!--PC header-->
+    <header class="LayoutHeader1024 LayoutHeader Position-s Flex-Box-Parent Flex-AI-c">
+      <div class="logo Position-r">
+        <a href="">
+          <i>
+            <span>t</span>eamUP
+          </i>
+          <span>.</span>
+        </a>
+        <span id="beta" class="Position-a">beta</span>
+      </div>
+      <div class="menu FB-fbf-1">
+        <ul>
+          <li>
+            <a href="/">首頁</a>
+          </li>
+          <li>
+            <a href="">找報價 / 外包
+              <i class="icon fas fa-sort-down"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">找人才 / 團隊
+              <i class="icon fas fa-sort-down"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">我要接案 / 組隊
+              <i class="icon fas fa-sort-down"></i>
+            </a>
+          </li>
+          <li>
+            <a href="">問題回報</a>
+          </li>
+          <li><a href="">捐贈</a></li>
+        </ul>
+      </div>
+      <div class="user">
+        <a href="">
+          <span><i class="far fa-user"></i> 登入 / 註冊 </span>
+        </a>
+      </div>
+    </header>
+    <!-- end -->
+    <div class="FB-fbf-1">
+      <style>
+        div#Content{
+          height:calc(100vh - 55px);
+        }
+        .logincontent{
+          height: 100%;
+        }
+        .loginformbody{
+          width: 90%;
+          max-width: 350px;
+          padding:20px ;
+          background-color: #fff;
+
+        }
+        .logintitle{
+          margin: 0 auto 20px;
+          color: #274c77;
+          font-size: 18px;
+
+        }
+        .inputbox{
+          height: 38px;
+          margin:0 auto 20px;
+          outline:1px solid #a3cef1;
+          border-radius: 3px;
+        }
+        .inputbox span{
+          width: 40px;
+          height: 100%;
+          vertical-align: top;
+          display: inline-block;
+        }
+        .inputbox span .icon{
+          color: #8b8c89;
+          font-size: 18px;
+        }
+        .inputbox input[type=text]{
+          width: calc(100% - 45px);
+          height: 100%;
+          color: #8b8c89;
+        }
+        .inputcheckbox{
+          padding:10px 0 30px;
+          font-size: 14px;
+        }
+        .inputcheckbox input[type=checkbox]{
+          vertical-align: bottom;
+        }
+        .loginformbody button{
+          width: 100%;
+          padding:8px 0;
+          color: #fff;
+          font-size: 16px;
+          background-color: #274c77;
+          border-radius: 3px;
+        }
+      </style>
+      <div id="Content">
+        <!--內容區塊-->
+        <div class="logincontent Position-r Overflow-a">
+          <div class="loginformbody Position-a Position-Translate50">
+            <h2 class="logintitle t-align-c">
+              登入 TeamUP.
+            </h2>
+            <form action="">
+              <div class="inputbox Overflow-h">
+                <span class=" Position-r"><i class="fas fa-user icon Position-a Position-Translate50"></i></span>
+                <input type="text" placeholder="帳號 (mail 或 電話)">
+              </div>
+              <div class="inputbox Overflow-h">
+                <span class=" Position-r"><i class="fas fa-unlock-alt icon Position-a Position-Translate50"></i></span>
+                <input type="text" placeholder="密碼">
+              </div>
+              <div class="inputcheckbox">
+                <input type="checkbox" id="remember" name="remember">
+                <label for="remember">
+                  記住密碼
+                </label>
+              </div>
+              <button type="button">登入</button>
+            </form>
+            <div class="">
+
+            </div>
+          </div>
+        </div>
+        <!--內容區塊 end-->
+      </div>
+      
+    </div>
+  </div>
+</body>
+
+</html>
+<script>
+  const bannerdoc = document.querySelector(".banner-text");
+
+  window.addEventListener("scroll", () => {
+    let ScrollValue = window.scrollY;
+  });
+</script>
