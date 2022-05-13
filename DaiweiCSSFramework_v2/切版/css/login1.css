@@ -1,0 +1,119 @@
+.logincontent {
+    height: 100%;
+  }
+
+  .loginformbody {
+    width: 90%;
+    max-width: 350px;
+    padding: 20px;
+    margin: 10% auto 30px;
+    background-color: #fff;
+
+  }
+
+  .logintitle {
+    margin: 0 auto 20px;
+    color: #274c77;
+    font-size: 18px;
+
+  }
+
+  .inputbox {
+    height: 38px;
+    margin: 0 auto 20px;
+    outline: 1px solid #a3cef1;
+    border-radius: 3px;
+  }
+
+  .inputbox span {
+    width: 40px;
+    height: 100%;
+    margin-right: -4px;
+    vertical-align: top;
+    display: inline-block;
+  }
+
+  .inputbox span .icon {
+    color: #8b8c89;
+    font-size: 18px;
+  }
+
+  .inputbox input[type=text], .inputbox input[type=password], .inputbox select{
+    width: calc(100% - 45px);
+    height: 100%;
+    color: #8b8c89;
+    border: 0;
+  }
+
+  .inputcheckbox {
+    padding: 10px 0 30px;
+    font-size: 14px;
+  }
+
+  .inputcheckbox input[type=checkbox] {
+    vertical-align: bottom;
+  }
+
+  .loginformbody form button {
+    width: 100%;
+    color: #fff;
+    padding: 8px 0;
+    margin: 10px auto 0;
+    font-size: 16px;
+    border-radius: 3px;
+  }
+  .TeamUp-button {
+    background-color: #274c77;
+  }
+
+  .other-buttonbox {
+    width: 100%;
+    height: 38px;
+    margin: 10px auto 0;
+    outline: 1px solid #6096ba;
+    border-radius: 3px;
+  }
+  .other-buttonbox span{
+    width: 40px;
+    height: 100%;
+    color: #fff;
+  }
+  .other-buttonbox button{
+    width: calc(100% - 42px);
+    height: 100%;
+    background:transparent;
+  }
+  .other-buttonbox button::before{
+    content: '使用 ';
+  }
+
+  .Fb-button {
+    background-color: #3B5998;
+  }
+
+  .Google-button {
+    background-color: #D7503C;
+  }
+
+  .Line-button {
+    background-color: #01a301;
+  }
+
+  .loginurl ul {
+    width: 100%;
+    padding: 30px 0;
+  }
+
+  .loginurl li {
+    width: calc(calc(100% / 3) - 4px);
+    display: inline-block;
+  }
+
+  .loginurl li a {
+    color: #6096ba;
+    font-size: 14px;
+  }
+
+  .loginurl li a:hover::before {
+    content: '#';
+  }
