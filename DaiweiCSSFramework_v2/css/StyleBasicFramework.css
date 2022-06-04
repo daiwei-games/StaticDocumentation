@@ -108,6 +108,16 @@ table {
     left: 50%;
     transform: translate(-50%, -50%);
 }
+.Position-TranslateY50{
+    top:50%;
+    transform: translateY(-50%);
+}
+.Position-TranslateX50{
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+
 .UserSelect-n{/*禁止選取反白*/
     user-select:none;
     -ms-user-select: none;
