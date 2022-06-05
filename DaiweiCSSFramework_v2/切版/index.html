@@ -123,11 +123,13 @@
 
           .user-content-menu-Mobile {
             width: calc(100% - 6px);
+            max-height:70vh;
             color: #fff;
             border-radius: 18px 18px 0 0;
-            top:50vh;
+            box-shadow: 0 -5px 12px rgba(0,0,0,0.3);
             bottom: 0;
             background-color: #274c77;
+            z-index: 9999998;
           }
 
           .user-content-menu-Mobile * {
@@ -141,21 +143,24 @@
           }
 
           .user-content-url {
-            padding:12px;
-            grid-gap:10px;
-            grid-template-columns:repeat(auto-fill, minmax(80px, 1fr));
+            padding: 12px;
+            grid-gap: 10px;
+            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
           }
-          .user-content-url .url-item{
-            border:1px groove #fff;
+
+          .user-content-url .url-item {
+            border: 1px groove #fff;
             border-radius: 8px;
           }
-          .user-content-url .icon{
-            padding:12px 0 0;
+
+          .user-content-url .icon {
+            padding: 12px 0 0;
             text-align: center;
             font-size: 30px;
           }
-          .user-content-url .menu-name{
-            padding:0 0 12px;
+
+          .user-content-url .menu-name {
+            padding: 0 0 12px;
             font-size: 14px;
             text-align: center;
           }
@@ -238,19 +243,64 @@
           </div>
         </div>
         <div class="user-content-menu-Mobile Flex-Box-Parent FB-DO-cv Position-f Position-TranslateX50">
+
           <h3 class="t-align-c">
             會員中心
           </h3>
           <div class="FB-fbf-1 Overflow-a">
             <div class="user-content-url Overflow-a GridParent">
+
               <div class="url-item">
                 <a href="">
                   <div class="icon">
                     <i class="fas fa-user-edit"></i>
                   </div>
                   <p class="menu-name">基本資料</p>
+                </a>
               </div>
-              </a>
+
+              <div class="url-item">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-icons"></i>
+                  </div>
+                  <p class="menu-name">作品集</p>
+                </a>
+              </div>
+              
+              <div class="url-item">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-briefcase"></i>
+                  </div>
+                  <p class="menu-name">外包專區</p>
+                </a>
+              </div>
+              
+              <div class="url-item">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-project-diagram"></i>
+                  </div>
+                  <p class="menu-name">我的團隊</p>
+                </a>
+              </div>
+              
+              <div class="url-item">
+                <a href="">
+                  <div class="icon">
+                    <i class="fas fa-user-cog"></i>
+                  </div>
+                  <p class="menu-name">帳號設定</p>
+                </a>
+              </div>
+
+            </div>
+            <div>
+              關閉
+              <p>
+                <i class="fas fa-angle-down"></i>
+              </p>
             </div>
           </div>
         </div>
