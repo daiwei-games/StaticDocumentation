@@ -10,7 +10,7 @@
     <style>
         .Girdparent1 {
             grid-template-rows: repeat(3, 1fr) auto [r-end];
-            grid-template-columns: repeat(1,minmax(100px, 250px)) repeat(2, 1fr) auto [c-end];
+            grid-template-columns: repeat(1,minmax(100px, 250px)) repeat(1, 1fr) auto [c-end];
             background-color: #f1f1f1;
             outline:1px solid red;
         }
@@ -41,8 +41,8 @@
 
     <style>
         .Girdparent2{
-            grid-gap:6px;
-            grid-template-columns:repeat(auto-fill, minmax(10em, 1fr));
+            grid-gap:10px;
+            grid-template-columns:repeat(auto-fill, minmax(100px, 1fr));
         }
         .item{
             width: 100%;
@@ -55,7 +55,7 @@
             object-fit: contain;
         }
     </style>
-    <div class="Girdparent Girdparent2">
+    <div class="GridParent Girdparent Girdparent2">
         <div class="item"><img src="https://cdn-images-1.medium.com/max/1200/1*E9vOmYklTp23VYaumzHSgA.png" alt=""></div>
         <div class="item"><img src="https://cdn-images-1.medium.com/max/1200/1*E9vOmYklTp23VYaumzHSgA.png" alt=""></div>
         <div class="item"><img src="https://cdn-images-1.medium.com/max/1200/1*E9vOmYklTp23VYaumzHSgA.png" alt=""></div>
