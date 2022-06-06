@@ -121,15 +121,23 @@
             vertical-align: text-top;
           }
 
+          /*手機選單 Start*/
+          .user-content-menu-Mobile-close {
+            bottom: -200%;
+          }
+
+          .user-content-menu-Mobile-open {
+            bottom: 0;
+          }
+
           .user-content-menu-Mobile {
             width: calc(100% - 6px);
-            max-height:70vh;
+            max-height: 70vh;
             color: #fff;
             border-radius: 18px 18px 0 0;
-            box-shadow: 0 -5px 12px rgba(0,0,0,0.3);
-            bottom: 0;
+            box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.3);
             background-color: #274c77;
-            z-index: 9999998;
+            z-index: 9999997;
           }
 
           .user-content-menu-Mobile * {
@@ -165,6 +173,16 @@
             text-align: center;
           }
 
+          .user-content-menu-Mobile span.user-menu-Mobile-Switch {
+            font-size: 14px;
+            font-weight: 400;
+            right: 30px;
+            z-index: 9999998;
+          }
+
+
+
+          /*手機選單 end*/
           @media only screen and (max-width: 1023px) {
             .user-content-menu {
               max-width: 280px;
@@ -195,6 +213,8 @@
           }
         </style>
         <div class="Flex-Box-Parent FB-DO-rh">
+
+          <!--PC選單 start-->
           <div class="user-content-menu Overflow-h">
             <ul class="Position-s">
               <li>
@@ -239,13 +259,23 @@
               </li>
             </ul>
           </div>
+          <!--PC選單 end-->
+
           <div class="FB-fbf-1">
           </div>
         </div>
-        <div class="user-content-menu-Mobile Flex-Box-Parent FB-DO-cv Position-f Position-TranslateX50">
 
-          <h3 class="t-align-c">
+
+        <!--手機選單 start-->
+        <div
+          class="user-content-menu-Mobile user-content-menu-Mobile-close Flex-Box-Parent FB-DO-cv Position-f Position-TranslateX50">
+
+          <h3 class="t-align-c Position-r">
             會員中心
+            <span class="user-menu-Mobile-Switch Position-a Position-TranslateY50">
+              CLOSE
+              <i class="fas fa-angle-down"></i>
+            </span>
           </h3>
           <div class="FB-fbf-1 Overflow-a">
             <div class="user-content-url Overflow-a GridParent">
@@ -258,7 +288,6 @@
                   <p class="menu-name">基本資料</p>
                 </a>
               </div>
-
               <div class="url-item">
                 <a href="">
                   <div class="icon">
@@ -267,7 +296,7 @@
                   <p class="menu-name">作品集</p>
                 </a>
               </div>
-              
+
               <div class="url-item">
                 <a href="">
                   <div class="icon">
@@ -276,7 +305,7 @@
                   <p class="menu-name">外包專區</p>
                 </a>
               </div>
-              
+
               <div class="url-item">
                 <a href="">
                   <div class="icon">
@@ -285,7 +314,7 @@
                   <p class="menu-name">我的團隊</p>
                 </a>
               </div>
-              
+
               <div class="url-item">
                 <a href="">
                   <div class="icon">
@@ -294,15 +323,19 @@
                   <p class="menu-name">帳號設定</p>
                 </a>
               </div>
-
             </div>
-            <div>
-              關閉
+
+            <div class="user-menu-Mobile-Switch t-align-c">
+              CLOSE
               <p>
                 <i class="fas fa-angle-down"></i>
               </p>
             </div>
           </div>
+        </div>
+        <!--手機選單 end-->
+        <div class="menu-Switch-Open t-align-c Position-f Position-TranslateX50" style="bottom:0;">
+          <p>打開選單</p>
         </div>
 
 
@@ -315,6 +348,45 @@
 
 </html>
 <script>
+  const Doc = document;
+
+
+  const menuSwitchButton = Doc.querySelectorAll(".user-menu-Mobile-Switch");
+  const menuSwitchButtonOpen = Doc.querySelector(".menu-Switch-Open");
+  const menuObj = Doc.querySelector(".user-content-menu-Mobile");
+  const menuOp = "user-content-menu-Mobile-open";
+  const menuCo = "user-content-menu-Mobile-close";
+  class UserContentSwitchScripts {
+    constructor(Obj, ClassNameOpen, ClassNameClose) {
+      this.Obj = Obj;
+      this.ClassNameOpen = ClassNameOpen;
+      this.ClassNameClose = ClassNameClose;
+    }
+    open() {
+      let mobj = this.Obj.classList, Op = this.ClassNameOpen, Co = this.ClassNameClose;
+      if (mobj.contains(Co)) {
+        mobj.remove(Co);
+        mobj.add(Op);
+      }
+    }
+    close() {
+      let mobj = this.Obj.classList, Op = this.ClassNameOpen, Co = this.ClassNameClose;
+      if (mobj.contains(Op)) {
+        mobj.remove(Op);
+        mobj.add(Co);
+      }
+    }
+  }
+  const SwitchClass = new UserContentSwitchScripts(menuObj, menuOp, menuCo);
+  menuSwitchButton.forEach(element => {
+    element.addEventListener("click", () => {
+      SwitchClass.close();
+    });
+  });
+  menuSwitchButtonOpen.addEventListener("click", () => {
+    SwitchClass.open();
+  });
+
   const bannerdoc = document.querySelector(".banner-text");
 
   window.addEventListener("scroll", () => {
