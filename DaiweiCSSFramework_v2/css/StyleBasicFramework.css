@@ -187,3 +187,5 @@ table {
 .clear-both{
     clear:both;
 }
+.cursor-pointer{
+    cursor: pointer;}
