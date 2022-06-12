@@ -354,19 +354,40 @@
 
               .Data-block .BigDataTitle {}
 
-              .Data-block .DataType-Block {
-                min-width: 120px;
-                width: 30%;
-                max-width: 200px;
-                padding: 8px 12px;
-                margin-bottom: 4px;
-                vertical-align: text-bottom;
-                background-color: #fff;
-                border-radius: 12px;
-                display: inline-block;
+              .DataType-Block-Parent {
+                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+                grid-gap: 6px;
               }
 
+              .Data-block .DataType-Block {
+                padding: 8px 12px;
+                vertical-align: text-top;
+                background-color: #fff;
+                border-radius: 12px;
 
+                position: relative;
+              }
+
+              .Data-block .DataType-Block .verify {
+                color: rgb(37, 185, 0);
+                font-size: 14px;
+                top: 5px;
+                right: 10px;
+              }
+
+              .Data-block .DataType-Block .noverify {
+                color: rgb(175, 175, 175);
+                font-size: 14px;
+                top: 5px;
+                right: 10px;
+
+              }
+
+              .Data-block .DataType-Block button {
+                margin-top: 12px;
+                color: #fff;
+                background-color: #6096ba;
+              }
 
               .Title-Separate {
                 height: 3px;
@@ -396,7 +417,11 @@
                 border-radius: 12px;
               }
 
-              @media only screen and (max-width: 460px) {
+              @media only screen and (max-width: 560px) {
+                .DataType-Block-Parent {
+                  
+                }
+
                 .Data-block .DataType-Block {
                   width: 100%;
                   max-width: 100%;
@@ -430,35 +455,41 @@
               <div class="Data-block">
                 <h3 class="BigDataTitle">基本資料</h3>
                 <hr class="Title-Separate">
-                <span class="DataType-Block">
-                  姓名
-                  <p>無英豪</p>
-                </span>
-                <span class="DataType-Block">
-                  手機號碼
-                  <p>0988397890</p>
-                </span>
+                <div class="DataType-Block-Parent GridParent">
 
-                <span class="DataType-Block">
-                  電子郵件
-                  <p>s99113266@gmail.com</p>
-                </span>
+                  <span class="DataType-Block">
+                    姓名
+                    <p>無英豪</p>
+                  </span>
+                  <span class="DataType-Block">
+                    手機號碼
+                    <p>0988397890</p>
+                    <span class="Position-a verify"><i class="fas fa-check"></i> 驗證</span>
+                  </span>
 
-                <span class="DataType-Block">
-                  註冊時間
-                  <p>2022-06-11</p>
-                </span>
-                <span class="DataType-Block">
-                  最後登入
-                  <p>2022-06-11 23:59:59</p>
-                </span>
+                  <span class="DataType-Block">
+                    電子郵件
+                    <p>s99113266@gmail.com</p>
+                    <span class="Position-a noverify"><i class="fas fa-exclamation"></i> 未驗證</span>
+                    <button type="button">驗證</button>
+                  </span>
 
-                <span class="DataType-Block">
-                  生日
-                  <p>2022-06-11</p>
-                </span>
+                  <span class="DataType-Block">
+                    註冊時間
+                    <p>2022-06-11</p>
+                  </span>
+                  <span class="DataType-Block">
+                    最後登入
+                    <p>2022-06-11 23:59:59</p>
+                  </span>
+
+                  <span class="DataType-Block">
+                    生日
+                    <p>2022-06-11</p>
+                  </span>
+                </div>
                 <div class="Call-Form-block">
-                  <button type="button" class="CallFormButton"><i class="fas fa-pen-nib"></i> 修改</button>
+                  <button type="button" data-formtype="123" class="CallFormButton"><i class="fas fa-pen-nib"></i> 修改</button>
                 </div>
               </div>
             </div>
@@ -550,7 +581,7 @@
 
 </html>
 <script>
-  const Doc = document;
+  const Doc = document; //不用寫進正式JS腳本裡
 
 
   const menuSwitchButton = Doc.querySelectorAll(".menu-Switch-Close");
@@ -589,8 +620,18 @@
     SwitchClass.open();
   });
 
-  const bannerdoc = document.querySelector(".banner-text");
+  const callformButton = Doc.querySelector(".CallFormButton");
+  function CallFormAJAX(){
+    if(callformButton.getAttribute("data-formtype")){
+      console.log(callformButton.dataset.formtype);
+    }else{
+      console.log(callformButton.getAttribute("data-formtype"));
+  
+    }
+  }
 
+
+  const bannerdoc = document.querySelector(".banner-text");
   window.addEventListener("scroll", () => {
     let ScrollValue = window.scrollY;
   });
