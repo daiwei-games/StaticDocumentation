@@ -437,9 +437,35 @@
                   width: 90%;
                   padding: 9px 0;
                 }
+
+              }
+              #AjaxContent{
+
+              }
+              #AjaxContent > div{
+                background: rgba(0, 0, 0, 0.3);
+                top:-200%;
+                bottom:-200%;
+                left: -200%;
+                right: -200%;
+                z-index: 9998;
+              }
+              #AjaxContent > div > div{
+                padding:24px;
+                background-color: #fff;
+                border-radius: 12px;
+                z-index: 9999;
               }
             </style>
             <div class="user-page-body">
+              <div id="AjaxContent" class="">
+                <div class="Position-f">
+                  <div class="Flex-Box-Parent Position-f Position-Translate50">
+                    123456
+                  </div>
+                </div>
+              </div>
+              <!--頁面內容 Start-->
               <div class="t-align-c  Position-r">
 
                 <div class="user-head-content Position-r">
@@ -489,9 +515,13 @@
                   </span>
                 </div>
                 <div class="Call-Form-block">
+                  <div></div>
                   <button type="button" data-formtype="123" class="CallFormButton"><i class="fas fa-pen-nib"></i> 修改</button>
                 </div>
               </div>
+
+              <!--頁面內容 end-->
+
             </div>
 
           </div>
