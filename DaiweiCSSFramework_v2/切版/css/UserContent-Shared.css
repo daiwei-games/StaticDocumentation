@@ -1,0 +1,146 @@
+.iCon-span {
+  width: 40px;
+  height: 1em;
+  margin-right: -4px;
+  display: inline-block;
+}
+
+/*會員中心 頁面主體*/
+.user-page-body {
+  max-width: 1024px;
+}
+
+@media only screen and (min-width: 769px) {
+  .user-page-body {
+    width: calc(100% - 20px);
+    padding: 0 24px 36px;
+    margin-top: 35px;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .user-page-body {
+    width: calc(100% - 20px);
+    padding: 0 24px 24px;
+    margin-top: 35px;
+  }
+}
+
+@media only screen and (max-width: 560px) {
+  .user-page-body {
+    width: calc(100% - 20px);
+    padding: 24px;
+    margin: 12px auto 0;
+  }
+}
+
+/*頁面標題*/
+.Title-Separate {
+  height: 3px;
+  margin: 18px auto;
+  background-color: #6096ba;
+  border-radius: 100px;
+}
+
+.Data-Separate {
+  height: 1px;
+  margin: 8px auto;
+  background-color: #6096ba;
+  border-radius: 100px;
+}
+
+/*呼叫表單按鈕*/
+.Call-Form-block {
+  padding: 24px 0 0;
+  text-align: right;
+}
+
+.CallFormButton {
+  width: 100px;
+  padding: 5px 0;
+  color: #fff;
+  font-size: 16px;
+  background-color: #6096ba;
+  border-radius: 12px;
+}
+
+@media only screen and (max-width: 560px) {
+  .Call-Form-block {
+    padding: 24px 0 0;
+    text-align: center;
+  }
+
+  .CallFormButton {
+    width: 90%;
+    padding: 9px 0;
+  }
+}
+
+/*Ajax表單*/
+#AjaxContent {
+}
+
+#AjaxContent > div {
+  background: rgba(0, 0, 0, 0.3);
+  top: -200%;
+  bottom: -200%;
+  left: -200%;
+  right: -200%;
+  z-index: 9998;
+}
+
+#AjaxContent > div > div {
+  min-width: 150px;
+  width: 90%;
+  max-width: 768px;
+  max-height: calc(100% - 120px);
+  padding: 24px;
+  background-color: #fff;
+  border-radius: 12px;
+  z-index: 9999;
+}
+
+.AjaxFormTitle {
+  width: 100%;
+  color: #6096ba;
+  font-size: 18px;
+}
+
+.AjaxFormTitle .AjaxForm-Close {
+  top: 0;
+  right: 0;
+}
+
+.AjaxForm-Close {
+  color: #6096ba;
+  font-size: 14px;
+}
+
+.AjaxFormBody {
+  padding: 24px 0;
+}
+
+.forminput {
+  margin-bottom: 12px;
+}
+
+.forminput * {
+}
+
+.forminput p {
+  color: #a0a0a0;
+  font-size: 14px;
+}
+
+.forminput input {
+  width: 100%;
+  color: #274c77;
+  border-bottom: 1px groove #a0a0a0;
+}
+
+.forminput button {
+  padding: 8px;
+  color: #f0ead2;
+  background-color: #adc178;
+  border-radius: 8px;
+}

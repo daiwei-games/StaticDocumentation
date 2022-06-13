@@ -10,6 +10,9 @@
   <link rel="stylesheet" href="css/CcustomizeReset.css" />
   <link rel="stylesheet" href="css/LayoutHeader1.css" />
   <link rel="stylesheet" href="css/LayoutFooter1.css" />
+  <link rel="stylesheet" href="css/UserContent-Menu.css" />
+  <link rel="stylesheet" href="css/UserContent-UserData.css" />
+  <link rel="stylesheet" href="css/UserContent-Shared.css" />
   <script src="https://kit.fontawesome.com/6bd870c950.js" crossorigin="anonymous"></script>
 </head>
 
@@ -87,143 +90,10 @@
     <div class="FB-fbf-1">
       <div id="ContentView">
         <!--內容區塊-->
-        <style>
-          .iCon-span {
-            width: 40px;
-            height: 1em;
-            margin-right: -4px;
-            display: inline-block;
-          }
-        </style>
-        <style>
-          .user-content-menu {
-            width: 100%;
-            max-width: 280px;
-            padding: 20px 0 0;
-          }
 
-          .user-content-menu ul {
-            padding: 0 18px;
-            top: 75px;
-          }
 
-          .user-content-menu li {
-            padding: 15px 0;
-          }
 
-          .user-content-menu li a {
-            color: #6096ba;
-          }
-
-          .user-content-menu li a .iCon-span {
-            width: 40px;
-            vertical-align: text-top;
-          }
-
-          /*手機選單 Start*/
-          .user-content-menu-Mobile-close {
-            bottom: -200%;
-          }
-
-          .user-content-menu-Mobile-open {
-            bottom: 0;
-          }
-
-          .user-content-menu-Mobile {
-            width: calc(100% - 6px);
-            max-height: 70vh;
-            color: #fff;
-            background-color: #274c77;
-            border-radius: 18px 18px 0 0;
-            box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.3);
-            z-index: 9999997;
-          }
-
-          .user-content-menu-Mobile * {
-            color: #fff;
-          }
-
-          .user-content-menu-Mobile>h3 {
-            padding: 12px 0;
-            font-weight: 500;
-            border-bottom: 1px groove #fff;
-          }
-
-          .user-content-url {
-            padding: 12px;
-            grid-gap: 10px;
-            grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
-          }
-
-          .user-content-url .url-item {
-            border: 1px groove #fff;
-            border-radius: 8px;
-          }
-
-          .user-content-url .icon {
-            padding: 12px 0 0;
-            text-align: center;
-            font-size: 30px;
-          }
-
-          .user-content-url .menu-name {
-            padding: 0 0 12px;
-            font-size: 14px;
-            text-align: center;
-          }
-
-          .user-content-menu-Mobile span.menu-Switch-Close {
-            font-size: 14px;
-            font-weight: 400;
-            right: 30px;
-            z-index: 9999998;
-          }
-
-          div.menu-Switch-Open {
-            padding: 3px 12px;
-            color: #fff;
-            font-size: 14px;
-            background-color: #274c77;
-            border-radius: 8px 8px 0 0;
-            box-shadow: 0 -5px 12px rgba(0, 0, 0, 0.3);
-            right: 12px;
-            z-index: 9999992;
-          }
-
-          /*手機選單 end*/
-          @media only screen and (max-width: 1023px) {
-            .user-content-menu {
-              max-width: 230px;
-            }
-
-            .user-content-menu ul {
-              top: 62px;
-            }
-          }
-
-          @media only screen and (max-width: 768px) {
-            .user-content-menu {
-              max-width: 200px;
-            }
-          }
-
-          @media only screen and (min-width: 560px) {
-
-            .user-content-menu-Mobile,
-            .menu-Switch-Open {
-              display: none;
-            }
-          }
-
-          @media only screen and (max-width: 560px) {
-            .user-content-menu {
-              max-width: 0px;
-              display: none;
-            }
-          }
-        </style>
         <div class="Flex-Box-Parent FB-DO-rh">
-
           <!--PC選單 start-->
           <div class="user-content-menu Overflow-h">
             <ul class="Position-s">
@@ -272,256 +142,42 @@
           <!--PC選單 end-->
 
           <div class="FB-fbf-1">
-            <style>
-              .user-page-body {
-                max-width: 1024px;
-              }
-
-              @media only screen and (min-width: 769px) {
-                .user-page-body {
-                  width: calc(100% - 20px);
-                  padding: 0 24px 36px;
-                  margin-top: 35px;
-                }
-              }
-
-              @media only screen and (max-width: 768px) {
-                .user-page-body {
-                  width: calc(100% - 20px);
-                  padding: 0 24px 24px;
-                  margin-top: 35px;
-                }
-              }
-
-              @media only screen and (max-width: 560px) {
-                .user-page-body {
-                  width: calc(100% - 20px);
-                  padding: 24px;
-                  margin: 12px auto 0;
-                }
-              }
-
-              .user-head-content {
-                width: 160px;
-                height: 160px;
-                margin: auto;
-                background-image: linear-gradient(160deg, #7B79EC, #9CF0E4);
-                border-radius: 12px;
-                z-index: 997;
-              }
-
-              .user-head-content-border {
-                width: 165px;
-                height: 165px;
-                margin: auto;
-                background-color: #eee;
-                border-radius: 12px;
-                z-index: 996;
-              }
-
-              .Images img {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-              }
-
-              .user-head {
-                width: 100px;
-                height: 100px;
-                border-radius: 200px;
-                outline: 1px solid #a9d9fd;
-                z-index: 998;
-              }
-
-              .user-head-upload {
-                color: #fff;
-                font-size: 28px;
-                filter: drop-shadow(0 0 3px #274c77);
-                bottom: 12px;
-                right: 10%;
-                z-index: 999;
-              }
-
-              .Data-block {
-                margin-top: 24px;
-              }
-
-              .Data-block .BigDataTitle,
-              .Data-block .DataType,
-              .Data-block .DataType-Block {
-                color: #6096ba;
-              }
-
-              .Data-block .BigDataTitle {}
-
-              .DataType-Block-Parent {
-                grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-                grid-gap: 6px;
-              }
-
-              .Data-block .DataType-Block {
-                padding: 8px 12px;
-                vertical-align: text-top;
-                background-color: #fff;
-                border-radius: 12px;
-
-                position: relative;
-              }
-
-              .Data-block .DataType-Block .verify {
-                color: rgb(37, 185, 0);
-                font-size: 14px;
-                top: 5px;
-                right: 10px;
-              }
-
-              .Data-block .DataType-Block .noverify {
-                color: rgb(175, 175, 175);
-                font-size: 14px;
-                top: 5px;
-                right: 10px;
-
-              }
-
-              .Data-block .DataType-Block button {
-                margin-top: 12px;
-                color: #fff;
-                background-color: #6096ba;
-              }
-
-              .Title-Separate {
-                height: 3px;
-                margin: 18px auto;
-                background-color: #6096ba;
-                border-radius: 100px;
-              }
-
-              .Data-Separate {
-                height: 1px;
-                margin: 8px auto;
-                background-color: #6096ba;
-                border-radius: 100px;
-              }
-
-              .Call-Form-block {
-                padding: 24px 0 0;
-                text-align: right;
-              }
-
-              .CallFormButton {
-                width: 100px;
-                padding: 5px 0;
-                color: #fff;
-                font-size: 16px;
-                background-color: #6096ba;
-                border-radius: 12px;
-              }
-
-              @media only screen and (max-width: 560px) {
-                .DataType-Block-Parent {
-                  
-                }
-
-                .Data-block .DataType-Block {
-                  width: 100%;
-                  max-width: 100%;
-
-                }
-
-                .Call-Form-block {
-                  padding: 24px 0 0;
-                  text-align: center;
-                }
-
-                .CallFormButton {
-                  width: 90%;
-                  padding: 9px 0;
-                }
-
-              }
-              #AjaxContent{
-
-              }
-              #AjaxContent > div{
-                background: rgba(0, 0, 0, 0.3);
-                top:-200%;
-                bottom:-200%;
-                left: -200%;
-                right: -200%;
-                z-index: 9998;
-              }
-              #AjaxContent > div > div{
-                padding:24px;
-                background-color: #fff;
-                border-radius: 12px;
-                z-index: 9999;
-              }
-            </style>
             <div class="user-page-body">
+              <!--AJAX表單 Start-->
               <div id="AjaxContent" class="">
-                <div class="Position-f">
-                  <div class="Flex-Box-Parent Position-f Position-Translate50">
-                    123456
-                  </div>
-                </div>
+                
               </div>
+              <!--AJAX表單 end-->
+
+
               <!--頁面內容 Start-->
-              <div class="t-align-c  Position-r">
+              <div id="AjaxPageContent">
 
-                <div class="user-head-content Position-r">
-                  <div class="Images user-head Overflow-h Position-a Position-Translate50">
-                    <img src="https://picsum.photos/200" alt="">
-                  </div>
-                  <span class="cursor-pointer user-head-upload Position-a"><i class="fas fa-camera-retro"></i></span>
+                <style>
+                  .UserContent-Min-Menu{
+                    border-bottom: 1px solid rgba(0,0,0,.1);
+                  }
+                  .UserContent-Min-Menu li{
+                    padding: 8px 12px;
+                    font-weight: 500;
+                    display: inline-block;
+                  }
+                </style>
+                <div class="Data-block">
+                  <ul class="UserContent-Min-Menu">
+                    <li>
+                      <a href="">圖/文作品(9,999)</a>
+                    </li>
+                    <li>
+                      <a href="">影/音作品(9,999)</a>
+                    </li>
+                  </ul>
+                  <h3 class="BigDataTitle">圖片</h3>
+                  <hr class="Title-Separate">
                 </div>
 
-                <div class="user-head-content-border Position-a Position-Translate50"></div>
               </div>
-
-              <div class="Data-block">
-                <h3 class="BigDataTitle">基本資料</h3>
-                <hr class="Title-Separate">
-                <div class="DataType-Block-Parent GridParent">
-
-                  <span class="DataType-Block">
-                    姓名
-                    <p>無英豪</p>
-                  </span>
-                  <span class="DataType-Block">
-                    手機號碼
-                    <p>0988397890</p>
-                    <span class="Position-a verify"><i class="fas fa-check"></i> 驗證</span>
-                  </span>
-
-                  <span class="DataType-Block">
-                    電子郵件
-                    <p>s99113266@gmail.com</p>
-                    <span class="Position-a noverify"><i class="fas fa-exclamation"></i> 未驗證</span>
-                    <button type="button">驗證</button>
-                  </span>
-
-                  <span class="DataType-Block">
-                    註冊時間
-                    <p>2022-06-11</p>
-                  </span>
-                  <span class="DataType-Block">
-                    最後登入
-                    <p>2022-06-11 23:59:59</p>
-                  </span>
-
-                  <span class="DataType-Block">
-                    生日
-                    <p>2022-06-11</p>
-                  </span>
-                </div>
-                <div class="Call-Form-block">
-                  <div></div>
-                  <button type="button" data-formtype="123" class="CallFormButton"><i class="fas fa-pen-nib"></i> 修改</button>
-                </div>
-              </div>
-
               <!--頁面內容 end-->
-
             </div>
 
           </div>
@@ -608,57 +264,12 @@
     </div>
   </div>
 </body>
-
 </html>
 <script>
   const Doc = document; //不用寫進正式JS腳本裡
 
 
-  const menuSwitchButton = Doc.querySelectorAll(".menu-Switch-Close");
-  const menuSwitchButtonOpen = Doc.querySelector(".menu-Switch-Open");
-  const menuObj = Doc.querySelector(".user-content-menu-Mobile");
-  const menuOp = "user-content-menu-Mobile-open";
-  const menuCo = "user-content-menu-Mobile-close";
-  class UserContentSwitchScripts {
-    constructor(Obj, ClassNameOpen, ClassNameClose) {
-      this.Obj = Obj;
-      this.ClassNameOpen = ClassNameOpen;
-      this.ClassNameClose = ClassNameClose;
-    }
-    async open() {
-      let mobj = this.Obj.classList, Op = this.ClassNameOpen, Co = this.ClassNameClose;
-      if (mobj.contains(Co)) {
-        mobj.remove(Co);
-        mobj.add(Op);
-      }
-    }
-    async close() {
-      let mobj = this.Obj.classList, Op = this.ClassNameOpen, Co = this.ClassNameClose;
-      if (mobj.contains(Op)) {
-        mobj.remove(Op);
-        mobj.add(Co);
-      }
-    }
-  }
-  const SwitchClass = new UserContentSwitchScripts(menuObj, menuOp, menuCo);
-  menuSwitchButton.forEach(element => {
-    element.addEventListener("click", () => {
-      SwitchClass.close();
-    });
-  });
-  menuSwitchButtonOpen.addEventListener("click", () => {
-    SwitchClass.open();
-  });
 
-  const callformButton = Doc.querySelector(".CallFormButton");
-  function CallFormAJAX(){
-    if(callformButton.getAttribute("data-formtype")){
-      console.log(callformButton.dataset.formtype);
-    }else{
-      console.log(callformButton.getAttribute("data-formtype"));
-  
-    }
-  }
 
 
   const bannerdoc = document.querySelector(".banner-text");
@@ -666,3 +277,4 @@
     let ScrollValue = window.scrollY;
   });
 </script>
+<script src="Scripts/UserContent.js"></script>
