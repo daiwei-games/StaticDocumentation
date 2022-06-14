@@ -1,0 +1,64 @@
+.UserContent-Min-Menu {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.UserContent-Min-Menu li {
+    padding: 8px 12px;
+    font-weight: 500;
+    display: inline-block;
+}
+.UserContent-Min-Menu li a{
+    color:#6096ba;
+}
+
+.Works-Block {
+    margin-top: 24px;
+}
+
+.Works-Button-Box button{
+    padding:5px 8px;
+    color:#fff;
+    font-size: 16px;
+}
+.Works-Button-Box .button-Add{
+    background-color: #adc178;
+}
+
+.Works-content {
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fill, minmax(133px, 260px));
+}
+.Works-box{
+    max-height:300px;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+}
+.Works-content-cover {
+    width:100%;
+    max-height:218px;
+    overflow: hidden;
+}
+.Works-content-cover > img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.Works-content-title{
+    padding:8px 12px;
+}
+.Works-content-title h2{
+    color: #6096ba;
+    font-size: 18px;
+    font-weight: 600;
+}
+.Works-content-title h4{
+    color:rgb(143, 143, 143);
+    font-size: 12px;
+    font-weight: 500;
+    text-align: right;
+}
+.Works-content-title h4::before{
+    content: '作品數量: ';
+}
