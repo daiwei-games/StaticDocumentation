@@ -124,18 +124,30 @@
   margin-bottom: 12px;
 }
 
-.forminput * {
-}
-
 .forminput p {
+  margin:8px auto;
   color: #a0a0a0;
   font-size: 14px;
 }
 
 .forminput input {
   width: 100%;
+  padding:8px;
   color: #274c77;
-  border-bottom: 1px groove #a0a0a0;
+  font-size: 18px;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.forminput textarea{
+  width: 100%;
+  height:150px;
+  padding:8px;
+  color: #274c77;
+  font-size: 18px;
+  border: 0;
+  border: 1px solid #ddd;
+  border-radius: 3px;
 }
 
 .forminput button {
@@ -144,7 +156,9 @@
   background-color: #adc178;
   border-radius: 8px;
 }
-
+.FormBasic{
+  padding:16px 5px;
+}
 
 /*會員中心 基本資料*/
 .user-head-content {
@@ -234,4 +248,20 @@
     width: 100%;
     max-width: 100%;
   }
+}
+/*迷你選單*/
+.UserContent-Min-Menu {
+  margin-bottom:5px;
+  border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+.UserContent-Min-Menu li {
+  padding: 8px 12px;
+  margin-right: -3px;
+  font-weight: 500;
+  outline: 1px solid rgba(0, 0, 0, .1);
+  display: inline-block;
+}
+.UserContent-Min-Menu li a{
+  color:#6096ba;
 }

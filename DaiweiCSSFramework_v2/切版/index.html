@@ -13,6 +13,8 @@
   <link rel="stylesheet" href="css/UserContent-Menu.css" />
   <link rel="stylesheet" href="css/UserContent-Shared.css" />
   <link rel="stylesheet" href="css/UserContent-Works.css" />
+  <script src="Scripts/basisJS.js"></script>
+  <script src="Scripts/OperateClassName.js"></script>
   <script src="https://kit.fontawesome.com/6bd870c950.js" crossorigin="anonymous"></script>
 </head>
 
@@ -145,115 +147,32 @@
             <div class="user-page-body">
               <!--AJAX表單 Start-->
               <div id="AjaxContent" class="">
-                
+                <!--====================================================-->
+
+                <!--====================================================-->
               </div>
               <!--AJAX表單 end-->
 
 
               <!--頁面內容 Start-->
               <div id="AjaxPageContent">
-
+                <!--====================================================-->
                 <div class="Data-block">
                   <ul class="UserContent-Min-Menu">
                     <li>
-                      <a href="">圖/文作品(9,999)</a>
+                      <a href="">已結案</a>
                     </li>
                     <li>
-                      <a href="">影/音作品(9,999)</a>
+                      <a href="">正在進行</a>
                     </li>
                   </ul>
-                  <div class="Works-Block">
-                    <div class="Flex-Box-Parent">
-                      <div class="Works-Button-Box">
-                        
-                      </div>
-                      <div class="FB-fbf-1"></div>
-                      <div class="Works-Button-Box">
-                        <button type="button" class="button-Add">新增作品</button>
-                      </div>
-                    </div>
-                    <div id="AjaxWorks-Page">
-
-                      <!--相簿 start-->
-                      <div class="WorksPage-Content Position-f">
-                        <div class="WorksPage Position-f Position-TranslateX50">
-                          <div class="Works1 Position-r Overflow-h">
-
-                            <div class="Works-back Works-back-hide cursor-pointer Position-a">
-                              <i class="fas fa-arrow-left"></i>
-                              返回
-                            </div>
-                            <div class="WorksAlbum-View Works-Close cursor-pointer Position-a">
-                              關閉
-                              <i class="fas fa-times"></i>
-                            </div>
-
-                            <div class="Works2 Works-album Position-a Flex-Box-Parent FB-DO-rh Overflow-h">
-                              <!--相簿-->
-                              <div class="Works3 GridParent Overflow-a">
-                                <div class="img-cover Overflow-h cursor-pointer">
-                                  <img src="https://picsum.photos/400/600" alt="">
-                                </div>
-                              </div>
-                              
-                              <!--相簿內容-->
-                              <div class="Works4 Flex-Box-Parent FB-DO-cv">
-                                <div class="WorkBid-img">
-                                  <img src="https://picsum.photos/400/600" alt="">
-                                </div>
-                                <div class="works5 FB-fbf-1 Overflow-a">
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                  <span class="WorkMin-img"><img src="https://picsum.photos/400/600" alt=""></span>
-                                </div>
-                              </div>
-                            </div>
-                            <!--相簿 end-->
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <h3 class="BigDataTitle">作品</h3>
-                    <hr class="Title-Separate">
-                    <div class="Works-content GridParent">
-                      
-                      <a href="javascript:;" class="WorksAlbum-View">
-                        <div class="Works-box">
-                          <div class="Works-content-cover">
-                            <img src="https://picsum.photos/200/300" alt="">
-                          </div>
-                          <div class="Works-content-title">
-                            <h2>LOGO設計</h2>
-                            <h4>
-                              <small>
-                                9,999
-                              </small>
-                            </h4>
-                          </div>
-                        </div>
-                      </a>
-
-                    </div>
-                  </div>
+                  <h3 class="BigDataTitle">
+                    外包專區
+                  </h3>
+                  <hr class="Title-Separate">
                 </div>
 
+                <!--====================================================-->
               </div>
               <!--頁面內容 end-->
             </div>
@@ -345,90 +264,19 @@
 
 </html>
 <script>
-  const Doc = document; //不用寫進正式JS腳本裡
 
-  class ClassNameController{
-    constructor(ClassObj){
-      this.ClassObj = document.querySelector(ClassObj);
-    }
-    ReClassObj(ClassName){
-      this.ClassObj = document.querySelector(ClassName);
-    }
-    ClassContains(ClassName){
-      let Obj = this.ClassObj.classList;
-      return Obj.contains(ClassName);
-    }
-    ClassToggle(ClassName){
-      let Obj = this.ClassObj.classList;
-      Obj.toggle(ClassName);
-    }
-    ClassRemove(ClassName){
-      let Obj = this.ClassObj.classList;
-      if(ClassContains(ClassName)){
-        Obj.remove(ClassName);
-      }
-    }
-    ClassAdd(ClassName){
-      let Obj = this.ClassObj.classList;
-      Obj.add(ClassName);
-    }
+
+
+
+
+  function ss({ aa, bb }) {
+    console.log(aa + bb);
+    console.log(bb);
   }
-
-  class WorksController extends ClassNameController{
-    constructor(ClassObj){
-      super(ClassObj);
-    }
-
-    WorksAlbumView(ClassName){
-      super.ClassToggle(ClassName);
-    }
-    
-    WorksAlbumSwitch(ClassName, ChangeClassName){
-      if(super.ClassContains(ClassName)){
-        super.ClassRemove(ClassName);
-        super.ClassAdd(ChangeClassName);
-      }
-    }
-    IsWorksAlbumValueViewOpen(ObjClassName, IsOpenOrClose = true){
-      console.log(ObjClassName.Album);
-      
-      super.ReClassObj(ObjClassName.Album);
-      if(!IsOpenOrClose){
-        WorksAlbumSwitch(ObjClassName.AlbumName, ObjClassName.VlaueName);
-      }
-      if(IsOpenOrClose){
-        WorksAlbumSwitch(ObjClassName.VlaueName, ObjClassName.AlbumName);
-      }
-
-      super.ReClassObj(ObjClassName.back);
-      if(!IsOpenOrClose){
-        WorksAlbumSwitch(ObjClassName.backAppear, ObjClassName.backHide);
-      }
-      if(IsOpenOrClose){
-        WorksAlbumSwitch(ObjClassName.backHide, ObjClassName.backAppear);
-      }
-      
-    }
-
-  }
-
-
-  
-  const g = new WorksController(".WorksPage-Content");
-  const Switch = {
-    Album:".Works2",
-    AlbumName:"Works-album",
-    VlaueName:"Works-value",
-    back:".Works-back",
-    backAppear:"Works-back-appear",
-    backHide:"Works-back-hide"
-  }
-  
-  g.IsWorksAlbumValueViewOpen(Switch);
-
   const bannerdoc = document.querySelector(".banner-text");
   window.addEventListener("scroll", () => {
     let ScrollValue = window.scrollY;
   });
 </script>
 <script src="Scripts/UserContent.js"></script>
+<script src="Scripts/UserContent-Works.js"></script>

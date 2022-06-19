@@ -1,13 +1,10 @@
 ﻿const Win = window;
 const Doc = document;
 class gettools{
-    constructor({cDoc, cWin}) {
-        this.cDoc = cDoc;
-        this.cWin = cWin;
+    constructor() {
     }
     getNameValue(GetName) {
-        let Win = this.cWin;
-        let nURL = new URL(Win.top.location.href);
+        let nURL = new URL(window.top.location.href);
         let nGet = new URLSearchParams(nURL.search);
         return nGet.get(GetName) != null ? nGet.get(GetName).toString() : "";
     }
@@ -15,22 +12,20 @@ class gettools{
         return location.protocol + "//" + location.host + "/" + TeUrlFile;
     }
     WinTopReplace(teurl) {
-        let Win = this.cWin;
-        Win.top.location.replace(teurl);
+        window.top.location.replace(teurl);
     }
     UpdateNowUrl(pageName, pageUrl) {
-        let Win = this.cWin;
-        Win.history.pushState({ "page": pageName }, "", getURL(pageUrl));
+        window.history.pushState({ "page": pageName }, "", getURL(pageUrl));
     }
 }
 
 function AjaxPage(tagID, pageTarget) {
     var xmlHttp, pageDoc;
-    let getURLs = new gettools({cDoc:Doc, cWin:Win});
+    let getURLs = new gettools();
     pageTarget = (pageTarget.toLowerCase().indexOf("http") == -1) ? getURLs.getURL(pageTarget) : pageTarget;
 
     return new Promise(function (resolve, reject) {
-        if (pageDoc = Doc.querySelector(tagID)) {  //顯示資料的物件ID
+        if (pageDoc = document.getElementById(tagID)) {  //顯示資料的物件ID
             if (window.XMLHttpRequest) {
                 //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
                 xmlHttp = new XMLHttpRequest();
@@ -68,10 +63,10 @@ function AjaxPage(tagID, pageTarget) {
 //使用Ajax傳送表單
 //AjaxForm(this物件顯示 , 表單ID, 送出路徑, Method模式)
 function AjaxForm(ClientThisBut, ClientFormID, ActionPurpose, FormMethod) {
-    var ClientData = Doc.getElementById(ClientFormID);
+    var ClientData = document.getElementById(ClientFormID);
     return new Promise(function (resolve, reject) { //宣告非同步执行
         let ButHtml = ClientThisBut.innerHTML; //紀錄按鈕
-        let getURLs = new gettools({cDoc:Doc, cWin:Win});
+        let getURLs = new gettools();
         let but = (val) => {
             if (val == 0) {
                 ButHtml = ClientThisBut.innerHTML; //紀錄按鈕
