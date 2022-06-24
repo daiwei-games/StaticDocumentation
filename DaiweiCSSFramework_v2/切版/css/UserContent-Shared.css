@@ -257,11 +257,41 @@
 
 .UserContent-Min-Menu li {
   padding: 8px 12px;
-  margin-right: -3px;
   font-weight: 500;
+  border-radius: 3px 3px 0 0;
   outline: 1px solid rgba(0, 0, 0, .1);
   display: inline-block;
 }
 .UserContent-Min-Menu li a{
   color:#6096ba;
+}
+.UserContentFormBlock{
+  padding:13px 16px;
+  margin:16px auto;
+  background-color: #001C40;
+  border-radius: 8px;
+}
+.UserContentFormBlock span{
+  margin:4px 4px 4px 0;
+  padding:5px 16px;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 100px;
+  outline: 1px solid #fff;
+  display: inline-block;
+}
+.UserContentFormBlock select{
+  padding:0 5px;
+  color: #fff;
+  font-size: 14px;
+  vertical-align: text-bottom;
+  background-color: #001C40;
+  border: 0;
+}
+.UserContentFormBlock input[type=text]{
+  width:120px;
+  padding:0 8px;
+  color: #fff;
+  font-size: 14px;
+  background-color: #001C40;
 }
