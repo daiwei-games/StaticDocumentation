@@ -1,7 +1,100 @@
-.OutsourcingBox{
+.OutsourcingItem{
+    background-color: #fff;
     border-radius: 8px;
 }
-.OutsourcingBox h3{
+.OutsourcingItem h3{
+    padding:13px 16px;
     color: #fff;
     background-color:#3D7878;
+}
+
+.OutsourcingDataBox{
+    min-height:100px;
+    padding:16px;
+}
+
+.OutsourcingDataBox span{
+    padding:5px 12px;
+    margin:4px 4px 4px 0;
+    color: #fff;
+    font-size: 14px;
+    background-color:#3D7878;
+    border-radius: 100px;
+    display: inline-block;
+}
+
+.data1{
+
+}
+.data1::before{
+    content: '我是此案：';
+}
+.data2{
+
+}
+.data2::before{
+    content: '案件預算：$ ';
+}
+.data3{
+
+}
+.data3::before{
+    content: '承接金額：$ ';
+}
+.data4{
+
+}
+.data4::before{
+    content: '預計完成日：成交後 ';
+}
+.data4::after{
+    content: ' 天';
+}
+.data5{
+
+}
+.data5::before{
+    content: '報價日期：';
+}
+.data6{
+
+}
+.data6::before{
+    content: '承接日期：';
+}
+.data7{
+
+}
+.data7::before{
+    content: '結案日期：';
+}
+.data8{
+
+}
+.data8::before{
+    content: '案件類型：';
+}
+.data9{
+
+}
+.data9::before{
+    content: '進度：';
+}
+.data10{
+
+}
+.data10::before{
+    content: '報價人數：';
+}
+.data10::after{
+    content: ' 人';
+}
+.data11{
+
+}
+.data11::before{
+    content: '邀請人數：';
+}
+.data11::after{
+    content: ' 人';
 }

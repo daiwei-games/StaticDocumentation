@@ -295,3 +295,16 @@
   font-size: 14px;
   background-color: #001C40;
 }
+@media only screen and (max-width: 560px) {
+  .UserContentFormBlock span{
+    width: 100%;
+  }
+  .UserContentFormBlock input[type=text]{
+    width:calc(100% - 80px);
+    padding:5px 8px;
+  }
+  .UserContentFormBlock select{
+    padding:5px 8px;
+    vertical-align: middle;
+  }
+}
