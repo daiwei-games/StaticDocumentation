@@ -98,3 +98,19 @@
 .data11::after{
     content: ' 人';
 }
+
+.Outsourcing-Mobile-Switch{
+
+}
+@media only screen and (max-width: 560px) {
+    .OutsourcingItem h3{
+        padding:7px 8px;
+        font-size: 18px;
+    }
+    .OutsourcingDataBox{
+        padding:8px;
+    }
+    .Mobile-Switch.Outsourcing-Mobile-Switch{
+        margin-bottom: 5%;
+    }
+}

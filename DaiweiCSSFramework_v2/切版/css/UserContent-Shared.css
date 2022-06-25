@@ -29,8 +29,8 @@
 @media only screen and (max-width: 560px) {
   .user-page-body {
     width: calc(100% - 20px);
-    padding: 24px;
-    margin: 12px auto 0;
+    padding: 8px;
+    margin: 6px auto 0;
   }
 }
 
@@ -77,10 +77,9 @@
 }
 
 /*Ajax表單*/
-#AjaxContent {
-}
+#AjaxContent {}
 
-#AjaxContent > div {
+#AjaxContent>div {
   background: rgba(0, 0, 0, 0.3);
   top: -200%;
   bottom: -200%;
@@ -89,7 +88,7 @@
   z-index: 9998;
 }
 
-#AjaxContent > div > div {
+#AjaxContent>div>div {
   min-width: 150px;
   width: 90%;
   max-width: 768px;
@@ -125,24 +124,24 @@
 }
 
 .forminput p {
-  margin:8px auto;
+  margin: 8px auto;
   color: #a0a0a0;
   font-size: 14px;
 }
 
 .forminput input {
   width: 100%;
-  padding:8px;
+  padding: 8px;
   color: #274c77;
   font-size: 18px;
   border: 1px solid #ddd;
   border-radius: 3px;
 }
 
-.forminput textarea{
+.forminput textarea {
   width: 100%;
-  height:150px;
-  padding:8px;
+  height: 150px;
+  padding: 8px;
   color: #274c77;
   font-size: 18px;
   border: 0;
@@ -156,8 +155,9 @@
   background-color: #adc178;
   border-radius: 8px;
 }
-.FormBasic{
-  padding:16px 5px;
+
+.FormBasic {
+  padding: 16px 5px;
 }
 
 /*會員中心 基本資料*/
@@ -243,68 +243,129 @@
   color: #fff;
   background-color: #6096ba;
 }
+
 @media only screen and (max-width: 560px) {
+  .Data-block {
+    margin-top: 12px;
+  }
   .Data-block .DataType-Block {
     width: 100%;
     max-width: 100%;
   }
 }
+
 /*迷你選單*/
 .UserContent-Min-Menu {
-  margin-bottom:5px;
+  margin-bottom: 5px;
   border-bottom: 1px solid rgba(0, 0, 0, .1);
 }
 
 .UserContent-Min-Menu li {
   padding: 8px 12px;
+  margin-top: 5px;
   font-weight: 500;
   border-radius: 3px 3px 0 0;
   outline: 1px solid rgba(0, 0, 0, .1);
   display: inline-block;
 }
-.UserContent-Min-Menu li a{
-  color:#6096ba;
+
+.UserContent-Min-Menu li a {
+  color: #6096ba;
 }
-.UserContentFormBlock{
-  padding:13px 16px;
-  margin:16px auto;
+
+@media only screen and (max-width: 560px) {
+  .UserContent-Min-Menu {
+    border-bottom: 0;
+  }
+  .UserContent-Min-Menu li {
+    width: 100%;
+    padding: 5px 12px;
+    border-radius: 3px;
+  }
+
+}
+
+.UserContentFormBlock {
+  padding: 13px 16px;
+  margin: 16px auto;
   background-color: #001C40;
   border-radius: 8px;
 }
-.UserContentFormBlock span{
-  margin:4px 4px 4px 0;
-  padding:5px 16px;
+
+.UserContentFormBlock span {
+  margin: 4px 4px 4px 0;
+  padding: 5px 16px;
   color: #fff;
   font-size: 14px;
   border-radius: 100px;
   outline: 1px solid #fff;
   display: inline-block;
 }
-.UserContentFormBlock select{
-  padding:0 5px;
+
+.UserContentFormBlock select {
+  padding: 0 5px;
   color: #fff;
   font-size: 14px;
   vertical-align: text-bottom;
   background-color: #001C40;
   border: 0;
 }
-.UserContentFormBlock input[type=text]{
-  width:120px;
-  padding:0 8px;
+
+.UserContentFormBlock input[type=text] {
+  width: 120px;
+  padding: 0 8px;
   color: #fff;
   font-size: 14px;
   background-color: #001C40;
 }
+#FormLoadings{
+  color: #fff;
+  display: none;
+}
+
 @media only screen and (max-width: 560px) {
-  .UserContentFormBlock span{
+  .UserContentFormBlock {
+    padding: 13px 8px;
+    margin:auto;
+    position:fixed;
+    top:calc(0px + 47px);
+    bottom:5px;
+    right: 5px;
+    left: 5px;
+  }
+  .UserContentFormBlock span {
     width: 100%;
   }
-  .UserContentFormBlock input[type=text]{
-    width:calc(100% - 80px);
-    padding:5px 8px;
+
+  .UserContentFormBlock input[type=text] {
+    width: calc(100% - 80px);
+    padding: 5px 8px;
   }
-  .UserContentFormBlock select{
-    padding:5px 8px;
-    vertical-align: middle;
+
+  .UserContentFormBlock select {
+    padding:0 2px;
+    vertical-align: text-bottom;
+  }
+  .UserContentFormBlock-DisplayNone{
+    display: none;
+  }
+  #FormLoadings{
+    display: block;
+  }
+}
+
+
+.Mobile-Switch{
+  display: none;
+}
+
+@media only screen and (max-width: 560px) {
+  .Mobile-Switch{
+    padding: 5px 0;
+    margin:8px auto;
+    color: #fff;
+    background-color: #001C40;
+    border-radius: 3px;
+    display: block;
   }
 }
