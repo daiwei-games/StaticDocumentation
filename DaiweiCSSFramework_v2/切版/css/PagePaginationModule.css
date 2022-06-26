@@ -1,0 +1,21 @@
+/*分頁模組*/
+.PagePaginationModule{
+    margin:18px auto;
+    text-align: right;
+}
+.PaginationNumber{
+    padding:8px 10px;
+    color: rgb(78, 78, 78);
+    outline: 1px solid #c5c5c5;
+    border-radius: 8px;
+    display: inline-block;
+}
+.PaginationNumber.IsNowNumber{
+    margin:0 6px;
+    color:#6096ba;
+    font-weight: 600;
+    outline: 2px solid #6096ba;
+}
+.PaginationData{
+    display: inline-block;
+}
