@@ -111,7 +111,3 @@ function AjaxForm(ClientThisBut, ClientFormID, ActionPurpose, FormMethod) {
         }
     });
 }
-
-function BodyOverflow(overflowVal) {
-    document.body.style.overflow = (overflowVal != "") ? overflowVal : ""; 
-}
