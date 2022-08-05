@@ -133,6 +133,11 @@ input[type=submit] {
 table {
     border-collapse: collapse;
 }
+canvas,
+audio,
+video{
+    vertical-align: top;
+}
 
 .Position-r {
     position: relative;
