@@ -1,0 +1,41 @@
+.PWA-ReminderWindow {
+    min-width: 300px;
+    background-color: #6e6e6e;
+    border-radius: 8px;
+    position: fixed;
+    top: 900%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.PWA-Content {
+    padding: 2em 0.5em;
+    color: #fff;
+    font-size: 1.5em;
+}
+
+.PWA-Button {
+    padding: 0.5em;
+    border-top: 1px groove #fff;
+    overflow: hidden;
+}
+
+.PWA-Button button {
+    padding: 0.5em;
+    margin-left: 6px;
+    color: #fff;
+    font-size: 1em;
+    background-color: transparent;
+    border: 0;
+    border-radius: 8px;
+    float: right;
+    cursor: pointer;
+}
+
+button.PWA-yes {
+    background-color: #005ab5;
+}
+
+button.PWA-no {
+    border: 1px groove #fff;
+}

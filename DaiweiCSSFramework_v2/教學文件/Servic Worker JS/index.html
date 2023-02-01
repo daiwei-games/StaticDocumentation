@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>網頁名稱</title>
+
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="/favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="/favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="/favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/favicon/site.webmanifest" />
+    <script>
+      if ("serviceWorker" in navigator) {
+        // 檢查browser有無支援serviceWorker
+        navigator.serviceWorker.register("/sw.js").then(function () {
+          // register會回傳一個Promise
+        });
+      }
+    </script>
+  </head>
+  <body>
+    <button type="button" onclick="addToHomeScreen();">Click</button>
+    <span id="text">Hello World !</span>
+
+    <link rel="stylesheet" href="/css/PWA-Window.css" />
+    <div class="PWA-ReminderWindow">
+      <div class="PWA-Content">是否將OPQ系統新增至主畫面?</div>
+      <div class="PWA-Button">
+        <button type="button" class="PWA-yes" onclick="addToHomeScreen();">
+          新增</button
+        ><button type="button" class="PWA-no" onclick="PWaNo();">取消</button>
+      </div>
+    </div>
+
+
+  </body>
+</html>
+<script>
+  // 把 event 存起來
+  var installPromptEvent;
+  // 要顯示 prompt 的延遲
+  var showTime = 30 * 1000;
+  window.addEventListener("beforeinstallprompt", function (e) {
+    e.preventDefault();
+    installPromptEvent = e;
+    var data = navigator.userAgent.match(/Chrom(e|ium)\\([0-9]+)\\./);
+
+    var version = data && data.length >= 2 ? parseInt(data[2], 10) : null;
+    if (version && installPromptEvent.prompt) {
+      // 延遲一段時間才顯示 prompt
+      setTimeout(function () {
+        // 如果 Chrome 版本是 67（含）以下，可以直接呼叫
+        if (version <= 67) {
+          installPromptEvent.prompt();
+          return;
+        }
+      }, showTime);
+    }
+  });
+  function addToHomeScreen() {
+    if (installPromptEvent) {
+      installPromptEvent.prompt();
+      installPromptEvent = null;
+      PWaNo();
+    }
+  }
+  async function GetInstalledRelatedApp() {
+    const relatedApps = await navigator.getInstalledRelatedApps();
+    let ua = navigator.userAgent;
+    let Pwadoc = document.querySelectorAll(".PWA-ReminderWindow")[0];
+    if (relatedApps.length == 0) {
+      switch (true) {
+        case ua.indexOf("iPhone") != -1:
+        case ua.indexOf("iPad") != -1:
+        case ua.indexOf("Mac") != -1:
+        case ua.indexOf("Windows NT") != -1:
+          break;
+        default:
+          Pwadoc.style.top = "50%";
+      }
+    }
+    let Txtdoc;
+    if(Txtdoc = document.getElementById("text")){
+      Txtdoc.innerHTML = relatedApps.length;
+    }
+  }
+  function PWaNo() {
+    let Pwadoc = document.querySelectorAll(".PWA-ReminderWindow")[0];
+    Pwadoc.style.top = "900%";
+  }
+  window.addEventListener("load", async () => {
+    ///要阻擋顯示視窗，只要不執行這個函式就可以了
+    await GetInstalledRelatedApp();
+  });
+</script>

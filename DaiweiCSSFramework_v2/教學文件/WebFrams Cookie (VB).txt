@@ -1,0 +1,39 @@
+VB 取得某個名稱的cookie
+Request.Cookies("cookie名稱").value
+Request.Cookies("cookie名稱")("群組裡面的細項名稱").value ''我忘記這需不需要加上value了
+
+
+VB 判斷有沒有此cookie
+if not IsNothing(Request.Cookies("cookie名稱")) then
+end if
+
+判斷群組cookie裡面的某個細項的內容
+if not IsNothing(Request.Cookies("群組cookie名稱")) then
+
+    if not IsNothing(Request.Cookies("群組cookie名稱")("群組裡面的細項名稱")) then
+    end if
+end if
+
+
+
+VB 建立群組的cookie的兩種方法
+
+1.
+Response.Cookies("群組cookie名稱")("群組裡面的細項名稱1") = "user1"
+Response.Cookies("群組cookie名稱")("群組裡面的細項名稱2") = "user2"
+Response.Cookies("群組cookie名稱").HttpOnly = True
+Response.Cookies("群組cookie名稱").Expires = DateAdd("d"365,now())
+
+
+2.
+Dim userCookie As New HttpCookie("群組cookie名稱")
+userCookie("群組裡面的細項名稱1") = "user1"
+userCookie("群組裡面的細項名稱2") = "user2"
+userCookie.HttpOnly = True
+userCookie.Expires = DateAdd("d"365,now())
+Response.Cookies.Add(userCookie)
+
+
+範例
+Response.Cookies("user")("no") = ""
+Response.Cookies("user").Expires = DateAdd("d"365,now())
