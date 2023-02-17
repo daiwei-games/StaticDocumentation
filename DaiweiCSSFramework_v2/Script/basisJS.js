@@ -22,8 +22,31 @@ class gettools{
         let Win = this.cWin;
         Win.history.pushState({ "page": pageName }, "", getURL(pageUrl));
     }
-}
+};
 
+//FileURL = 載入檔案的網址
+function AjaxFiles(FileURL) {
+    let XmlHttp;
+    return new Promise((resolve, reject) => {
+        if (!window.XMLHttpRequest) reject(0);
+        if (window.XMLHttpRequest) {
+            XmlHttp = new XMLHttpRequest();
+            XmlHttp.onreadystatechange = () => {
+                switch (XmlHttp.status) {
+                    case 200:
+                        if (XmlHttp.readyState == 3) { };
+                        if (XmlHttp.readyState == 4) resolve(XmlHttp.responseText);
+                        break;
+                    default:
+                        resolve(`${XmlHttp.status} : ${XmlHttp.readyState}`);
+                        break;
+                }
+            }
+        }
+    });
+};
+
+//tagID = "顯示的物件ID", pageTarget = "頁面路徑"
 function AjaxPage(tagID, pageTarget) {
     var xmlHttp, pageDoc;
     let getURLs = new gettools({cDoc:Doc, cWin:Win});
@@ -61,8 +84,8 @@ function AjaxPage(tagID, pageTarget) {
         } else {
             reject(0);
         }
-    })
-}
+    });
+};
 
 
 //使用Ajax傳送表單
@@ -110,4 +133,4 @@ function AjaxForm(ClientThisBut, ClientFormID, ActionPurpose, FormMethod) {
             but(1);
         }
     });
-}
+};
