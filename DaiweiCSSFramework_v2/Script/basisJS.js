@@ -27,10 +27,14 @@ class gettools{
 //FileURL = 載入檔案的網址
 function AjaxFiles(FileURL) {
     let XmlHttp;
+    let GetTools = new gettools({ cDoc: Doc, cWin: Win });
     return new Promise((resolve, reject) => {
-        if (!window.XMLHttpRequest) reject(0);
-        if (window.XMLHttpRequest) {
+        if (!Win.XMLHttpRequest || FileURL.length < 1) reject(0);
+        if (Win.XMLHttpRequest) {
             XmlHttp = new XMLHttpRequest();
+            XmlHttp.open("GET", GetTools.getURL(FileURL));
+            XmlHttp.send();
+
             XmlHttp.onreadystatechange = () => {
                 switch (XmlHttp.status) {
                     case 200:
@@ -79,7 +83,7 @@ function AjaxPage(tagID, pageTarget) {
                     resolve(1);
                 }
             }
-            xmlHttp.open("POST", pageTarget, true);
+            xmlHttp.open("POST", pageTarget);
             xmlHttp.send();
         } else {
             reject(0);

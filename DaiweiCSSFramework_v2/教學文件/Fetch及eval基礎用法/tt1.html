@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <input type="button" value="tt2.aspx載入到KKK DIV" onclick="ft_ld('tt2.html')">
+    
+    <div style="width: 500px;height: 500px;border: 2px solid red;" id="kkk">這是KKK DIV</div>
+
+    <script>
+        function ft_ld(asp) {
+            fetch(asp)
+                .then(response => response.text())
+                .then(data => {
+                    
+                    let h = document.getElementById("kkk");//取得插入區塊
+                    h.innerHTML = data;
+                    
+
+                    //將程式碼丟給eval編譯 PS.編譯過程並無法直接丟進全域變數
+                    //在此 textContent 只會取得所有文本內容，謹慎一點，取得特定區塊的文本比較妥當
+                    //textContent 如果你tt2.html檔案裏面有 <div>我是一片雲</div> 那麼你取得的就不只是JS程式，也包含"我是一片雲"
+
+                    console.log(h.textContent);//你可以打開「F12開發者工具 > 主控台(Console)」來看看你取得的是甚麼文本。
+                    eval(h.textContent);
+
+                    window.jsfuns = tt2; //將編譯後的函式丟給全域變數，不用加括號
+                    //PS.直接用window宣告圈域變數，或預先宣告的全域變數都可以。
+                    
+                });
+            }
+    </script>
+</body>
+</html>
