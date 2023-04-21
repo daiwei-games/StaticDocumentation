@@ -1,0 +1,14 @@
+Doc.querySelector(".contentBox").addEventListener("scroll", function (event) {
+            console.log(this.screenY);
+        });
+        Win.addEventListener("scroll", function (event) {
+            //console.log(this.scrollY);
+            //console.log(window.c);
+            let ParentHeight = Doc.querySelector(".theme").offsetParent;
+            console.log(this.scrollY);
+        });
+        Win.onload = function () {
+            var d = Doc.querySelector(".theme").clientHeight;
+            var s = Doc.querySelector(".theme").getBoundingClientRect();
+        console.log(d,s.y);
+        };
