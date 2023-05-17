@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="stylesheet" href="/css/StyleBasicFramework.css" />
+</head>
+<body>
+    <style>
+        .inputType1{
+            --public-color:#005aa5;
+            min-width:250px;
+            height: 30px;
+            border-radius:100px;
+            outline: 1px solid var(--public-color);
+        }
+        .inputName{
+            padding: 0 10px 0 ;
+            border-right:1px solid var(--public-color);
+        }
+        .inputName label{
+            color: var(--public-color);
+            display: inline-block;
+        }
+        .inputType1 input[type=text],
+        .inputType1 select{
+            padding:0 6px;
+            color: #577e9e;
+            background-color:transparent;
+        }
+    </style>
+    <div class="inputType1 Flex-Box-Parent-inline FB-DO-rh  Overflow-h">
+        <div class="inputName Flex-Box-Parent">
+            <label for="test1" class="Flex-AS-c FB-JCP-c">
+                姓名:
+            </label>
+        </div>
+        <input type="text" name="test1" id="test1" class="FB-fbf-1" list="keywords">
+        <datalist id="keywords">
+            <option value="001">ggg</option>
+            <option value="香蕉">
+            <option value="橙子">
+            <option value="葡萄">
+          </datalist>
+    </div>
+    <br>
+    <br>
+    <div class="inputType1 Flex-Box-Parent-inline FB-DO-rh Overflow-h">
+        <div class="inputName Flex-Box-Parent">
+            <label for="test2" class="Flex-AS-c FB-JCP-c">
+                選擇:
+            </label>
+        </div>
+        <select name="test2" id="test2" class="FB-fbf-1">
+            <option value="">請選擇</option>
+        </select>
+    </div>
+</body>
+</html>

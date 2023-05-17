@@ -120,6 +120,10 @@ input[type=checkbox] {
     -webkit-appearance: checkbox;
 }
 
+select {
+    border: 0;
+}
+
 select::-ms-expand {
     display: none;
 }
