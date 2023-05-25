@@ -22,7 +22,15 @@ class gettools{
         let Win = this.cWin;
         Win.history.pushState({ "page": pageName }, "", getURL(pageUrl));
     }
+    isIE() { //判斷是否為IE瀏覽器
+        let Win = this.cWin;
+        let uA = Win.navigator.userAgent;
+        let msie = uA.indexOf('MSIE ');
+        let trident = uA.indexOf('Trident/');
+        return (msie > 0 || trident > 0);
+    }
 };
+const publicTools = new gettools({ cDoc: Doc, cWin: Win });
 
 //FileURL = 載入檔案的網址
 function AjaxFiles(FileURL) {
