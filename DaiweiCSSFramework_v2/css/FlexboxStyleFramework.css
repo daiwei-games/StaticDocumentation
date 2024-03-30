@@ -1,0 +1,280 @@
+.dp-flex {
+    display: -webkit-box;
+    display: flex;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+}
+.dp-inline-flex{
+    display: -webkit-inline-box;
+    display: -ms-inline-flexbox;
+    display: inline-flex;
+}
+/*-----Flexbox 橫向、縱向 排列設定-----*/
+.flex-row{
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:row;
+            flex-direction:row;
+            /*--橫向--*/
+}
+.flex-row-reverse{
+    -webkit-box-orient:horizontal;
+    -webkit-box-direction:reverse;
+        -ms-flex-direction:row-reverse;
+            flex-direction:row-reverse;
+            /*--橫向 反向--*/
+}
+.flex-column{
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:normal;
+        -ms-flex-direction:column;
+            flex-direction:column;
+            /*--縱向--*/
+}
+.flex-column-reverse{
+    -webkit-box-orient:vertical;
+    -webkit-box-direction:reverse;
+        -ms-flex-direction:column-reverse;
+            flex-direction:column-reverse;
+            /*--縱向 反向--*/
+} 
+/*-----Flexbox 水平對齊設定-----*/
+.flex-start{
+    -webkit-box-pack:start;
+        -ms-flex-pack:start;
+            justify-content:flex-start;
+    /*-----靠左-----*/
+}
+.flex-end{
+    -webkit-box-pack:end;
+        -ms-flex-pack:end;
+            justify-content:flex-end;
+    /*-----靠右-----*/
+}
+.center{
+    -webkit-box-pack:center;
+        -ms-flex-pack:center;
+            justify-content:center;
+    /*-----置中-----*/
+}
+.space-between{
+    -webkit-box-pack:justify;
+        -ms-flex-pack:justify;
+            justify-content:space-between;
+    /*-----平均分布，左右兩邊切齊邊界之後，才開始分布-----*/
+}
+.space-around{
+    -ms-flex-pack:distribute;
+        justify-content:space-around;
+    /*-----平均分布，依中間為基準點，所以左右兩邊不一定可以切齊邊界-----*/
+}
+
+/*-----Flexbox 垂直對齊設定 (單行)-----*/
+.flex-start{
+    -webkit-box-align:start;
+        -ms-flex-align:start;
+            align-items:flex-start;
+    /*-----靠上-----*/
+}
+.flex-end{
+    -webkit-box-align:end;
+        -ms-flex-align:end;
+            align-items:flex-end;
+    /*-----靠下-----*/
+}
+.center{
+    -webkit-box-align:center;
+        -ms-flex-align:center;
+            align-items:center;
+    /*-----置中-----*/
+}
+.stretch{
+    -webkit-box-align:stretch;
+        -ms-flex-align:stretch;
+            align-items:stretch;
+    /*-----直接將元素的高佈滿於父元素內-----*/
+
+}
+.baseline{
+    -webkit-box-align:baseline;
+        -ms-flex-align:baseline;
+            align-items:baseline;
+    /*---以所有內容元素的底線作為對齊標準---*/
+}
+
+/*-----Flexbox 垂直對齊設定 (用來複寫已經套用 align-items 的元素)-----*/
+.as-flex-start{
+    -ms-flex-item-align:start;
+        align-self:flex-start;
+    /*-----靠上-----*/
+}
+.as-flex-end{
+    -ms-flex-item-align:end;
+        align-self:flex-end;
+    /*-----靠下-----*/
+}
+.as-center{
+    -ms-flex-item-align:center;
+        -ms-grid-row-align:center;
+        align-self:center;
+    /*-----置中-----*/
+}
+.as-stretch{
+    -ms-flex-item-align:stretch;
+        -ms-grid-row-align:stretch;
+        align-self:stretch;
+    /*-----直接將元素的高佈滿於父元素內-----*/
+
+}
+.as-baseline{
+    -ms-flex-item-align:baseline;
+        align-self:baseline;
+    /*---以所有內容元素的底線作為對齊標準---*/
+}
+
+/*-----Flexbox 垂直對齊設定 (多行)-----*/
+.flex-start{
+    -ms-flex-line-pack:start;
+        align-content:flex-start;
+        /*-----對齊最上面-----*/
+}
+.flex-end{
+    -ms-flex-line-pack:end;
+        align-content:flex-end;
+        /*-----對齊最下面-----*/
+}
+.center{
+    -ms-flex-line-pack:center;
+        align-content:center;
+        /*-----對齊中間-----*/
+}
+.space-between{
+    -ms-flex-line-pack:justify;
+        align-content:space-between;
+        /*-----拆成上下兩個部分，與上邊跟底邊切齊-----*/
+}
+.space-around{
+    -ms-flex-line-pack:distribute;
+        align-content:space-around;
+        /*-----看元素有多少行，平均分散在容器內，但不切齊上邊跟底邊-----*/
+}
+.stretch{
+    -ms-flex-line-pack:stretch;
+        align-content:stretch;
+        /*-----讓元素"高"坪均布滿整個容器-----*/
+}
+
+/*-----Flexbox 換行設定-----*/
+.nowrap{
+    -ms-flex-wrap:nowrap;
+        flex-wrap:nowrap;
+    /*-----不換行-----*/
+}
+.wrap{
+    -ms-flex-wrap:wrap;
+        flex-wrap:wrap;
+    /*-----換行-----*/
+}
+.wrap-reverse{
+    -ms-flex-wrap:wrap-reverse;
+        flex-wrap:wrap-reverse;
+    /*-----換行但從尾端開始-----*/
+}
+
+/*=========flex-flow 正向===========*/
+/*=========反向換行代表1會在最後一行===========*/
+.flex-flow-column-wrap{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+    /*--縱向 會換行--*/
+}
+.flex-flow-column-nowrap{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column nowrap;
+            flex-flow: column nowrap;
+    /*--縱向 不會換行--*/
+}
+
+.flex-flow-column-wrap_r{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap-reverse;
+            flex-flow: column wrap-reverse;
+    /*--縱向 會換行但反向換行--*/
+}
+
+.flex-flow-row-wrap{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap;
+            flex-flow: row wrap;
+    /*--橫向 會換行--*/
+}
+.flex-flow-row-nowrap{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row nowrap;
+            flex-flow: row nowrap;
+    /*--橫向 不會換行--*/
+}
+.flex-flow-row-wrap_r{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: row wrap-reverse;
+            flex-flow: row wrap-reverse;
+    /*--橫向 會換行但反向換行--*/
+}
+/*=========反向===========*/
+.flex-flow-column_r-wrap{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse wrap;
+            flex-flow: column-reverse wrap;
+    /*--縱向 反向 會換行--*/
+}
+.flex-flow-column_r-nowrap{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse nowrap;
+            flex-flow: column-reverse nowrap;
+    /*--縱向 反向 不會換行--*/
+}
+.flex-flow-column_r-wrap_r{
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse wrap-reverse;
+            flex-flow: column-reverse wrap-reverse;
+    /*--縱向 反向 會換行但反向換行--*/
+}
+
+.flex-flow-row_r-wrap{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse wrap;
+            flex-flow: row-reverse wrap;
+    /*--橫向 反向 會換行--*/
+}
+.flex-flow-row_r-nowrap{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse nowrap;
+            flex-flow: row-reverse nowrap;
+    /*--橫向 反向 不會換行--*/
+}
+.flex-flow-row_r-wrap_r{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: reverse;
+        -ms-flex-flow: row-reverse wrap-reverse;
+            flex-flow: row-reverse wrap-reverse;
+    /*--橫向 反向 會換行但反向換行--*/
+}
+
+/*===Flex 彈性盒子===*/
+.flex-1{
+    -webkit-box-flex:1;
+        -ms-flex:1;
+            flex:1;
+}
