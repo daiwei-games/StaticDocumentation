@@ -1,0 +1,84 @@
+/*文字多行省*/
+:root {
+    --omitted-clamp-1: 1;
+    --omitted-clamp-2: 2;
+    --omitted-clamp-3: 3;
+    --omitted-clamp-4: 4;
+    --omitted-clamp-5: 5;
+    --omitted-clamp-6: 6;
+    --omitted-clamp-7: 7;
+    --omitted-clamp-8: 8;
+    --omitted-clamp-9: 9;
+    --omitted-clamp-10: 10;
+}
+
+.text-omitted-1 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-1);
+    overflow: hidden;
+}
+
+.text-omitted-2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-2);
+    overflow: hidden;
+}
+
+.text-omitted-3 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-3);
+    overflow: hidden;
+}
+
+.text-omitted-4 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-4);
+    overflow: hidden;
+}
+
+.text-omitted-5 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-5);
+    overflow: hidden;
+}
+
+.text-omitted-6 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-6);
+    overflow: hidden;
+}
+
+.text-omitted-7 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-7);
+    overflow: hidden;
+}
+
+.text-omitted-8 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-8);
+    overflow: hidden;
+}
+
+.text-omitted-9 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-9);
+    overflow: hidden;
+}
+
+
+.text-omitted-10 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: var(--omitted-clamp-10);
+    overflow: hidden;
+}

@@ -1,0 +1,6 @@
+
+.GridParent{
+    display: grid;
+    display: -ms-grid;
+    display: -moz-grid;
+}

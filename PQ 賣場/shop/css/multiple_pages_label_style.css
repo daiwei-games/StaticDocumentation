@@ -1,0 +1,123 @@
+body {
+    background-color: #f9f9f9;
+}
+
+.body-container {
+    height: 100%;
+    margin: auto;
+}
+
+.body-content {
+    max-width: var(--max-w1024);
+    min-height: 100%;
+    margin: auto;
+}
+
+.body-content main {
+    padding: 16px;
+}
+@media all and (max-width: 768px) {
+
+    .body-content main {
+        padding: 8px;
+    }
+}
+
+@media all and (max-width: 500px) {
+    .body-content main {
+        padding: 0px;
+    }
+}
+
+/*多頁面使用標籤*/
+/*分隔線*/
+.divider {
+    height: 0;
+    margin-top: 18px;
+    border-top: 1px solid #dfe3e8;
+}
+
+/*免運標籤*/
+.freight-free-price {
+    font-size: 14px;
+    color: #768695;
+}
+
+.freight-free-price::before {
+    content: "免運";
+    padding: 1px 3px;
+    margin-right: 6px;
+    font-size: 14px;
+    color: #fff;
+    border-radius: 3px;
+    background-color: #00AF00;
+}
+
+.freight-free-price>u::before {
+    content: " 滿 ";
+}
+
+.commodity-button-container {
+    padding: 8px 16px 38px 8px;
+    margin: 0 auto 0;
+}
+
+.commodity-button-container span {
+    display: inline-block;
+}
+
+.commodity-boto-pay-directly-but,
+.commodity-boto-shoping-car-but {
+    width: 100%;
+    padding: 5px 20px;
+    margin: 10px auto 0;
+    font-size: 16px;
+    font-weight: 600;
+    border-radius: 4px;
+    background-color: transparent;
+}
+
+.commodity-boto-shoping-car-but {
+    color: rgba(72, 121, 255, 1);
+    box-shadow: 0 0 1px 1px rgba(72, 121, 255, 1);
+
+}
+
+.commodity-boto-pay-directly-but {
+    color: var(--commodity-red-color);
+    box-shadow: 0 0 1px 1px var(--commodity-red-color);
+
+}
+
+.commodity-button-iconfont {
+    width: 20px;
+}
+
+.product-content {
+    margin-top: 18px;
+}
+
+footer {
+    padding: 50px;
+    background-color: #EAEDF0;
+}
+
+footer>.company {
+    max-width: var(--max-w1024);
+    margin: auto;
+    text-align: center;
+}
+
+.mobile-page-leave-blank{
+    height: 0;
+}
+@media all and (max-width:500px) {
+    .mobile-page-leave-blank {
+        height: 50px;
+    }
+}
+
+.icon-font {
+    vertical-align: middle;
+    font-size: 24px;
+}

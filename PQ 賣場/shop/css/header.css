@@ -1,0 +1,157 @@
+.mobile-header {
+    height: 0;
+    z-index: 100;
+}
+.mobile-header-menu-but {
+    width: var(--mobile-phone-menu-wh);
+    height: var(--mobile-phone-menu-wh);
+    margin: 5px 5px 0 0;
+    display: none;
+}
+
+.pc-header {
+    height: 84px;
+}
+
+
+.searchbox {
+    padding: 0 20px 0 0;
+}
+
+.search {
+    border-radius: 3px;
+    box-shadow: 0 0 1px 0px rgba(0, 0, 0, 0.8);
+    background-color: #fff;
+}
+
+.search>input {
+    margin: auto;
+    padding: 12px;
+    font-size: 16px;
+}
+
+.search>button {
+    width: 35px;
+    font-size: 20px;
+    background-color: transparent;
+}
+
+.mobile-search-container {
+    height: 0;
+    padding: 0;
+
+}
+
+.mobile-search {
+    max-width: 100%;
+    margin: auto;
+}
+
+.mobile-search>input[type=text] {
+    width: calc(100% - 60px);
+}
+
+.mobile-search>button {
+    width: 60px;
+}
+
+.mobile-shoping-name-content {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.mobile-shoping-name {
+    padding: 20px 10px 0 20px;
+}
+
+.mobile-shoping-name h3 {
+
+    color: #fff;
+    font-size: 16px;
+}
+
+.mobile-shoping-name h3::after {
+    content: " 個人商場";
+    font-size: 12px;
+}
+
+.mobile-shoping-name p {
+    font-size: 12px;
+    color: #f1f1f1;
+    margin-top: 15px;
+}
+
+.mobile-shoping-item-container {
+    padding: 3px 5px;
+    border-left: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.mobile-shoping-item {
+    width: inherit;
+    height: 50%;
+    padding: 0 8px;
+    font-size: 12px;
+    color: #fff;
+}
+.logo img {
+    margin: auto;
+  }
+  
+@media all and (max-width:768px) {
+    .pc-header {
+        height: 0px;
+    }
+
+    .mobile-header {
+        height: calc(var(--mobile-phone-menu-wh) + 10px);
+        top: 0;
+        background-color: rgba(255, 255, 255, 0.7);
+    }
+
+    .mobile-header-menu-but {
+        display: block;
+    }
+
+    button.mobile-header-menu-but {
+        color: #666;
+        font-size: 30px;
+        box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.8);
+        border-radius: 6px;
+        background-color: #fff;
+    }
+
+    .mobile-header-menu-but>i {
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+    }
+
+}
+
+@media all and (min-width:501px) and (max-width:768px) {
+
+    .mobile-shoping-item p {
+        padding: 5px 0 0 5px;
+        display: inline-block;
+    }
+
+    .mobile-search-container {
+        height: auto;
+        padding: 16px 26px;
+    }
+
+}
+
+@media all and (max-width:500px) {
+
+    .mobile-search-container {
+        padding: 16px 13px;
+
+    }
+
+    .mobile-search-container {
+        height: auto;
+        padding: 16px 26px;
+    }
+}

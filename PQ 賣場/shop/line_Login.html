@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <form action="https://access.line.me/oauth2/v2.1/authorize" target="_blank" method="get">
+        <input type="text" name="response_type" value="code">
+        <input type="text" name="client_id" value="2004363777">
+        <input type="text" name="redirect_uri" value="https://PickQuick.tw/line/callback.html">
+        <input type="text" name="state" value="12345abcde">
+        <input type="text" name="scope" value="profile openid">
+        <input type="text" name="initial_amr_display" value="lineqr">
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>
